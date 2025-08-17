@@ -1,4 +1,3 @@
-/* Default text styling */
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -33,9 +32,6 @@ h5 {
 p {
     font-size: 1rem;
 }
-
-
-/* Color Scheme */
 
 :root {
     --primary-color: #999AC6;
