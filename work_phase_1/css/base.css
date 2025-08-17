@@ -6,7 +6,7 @@ body {
 
 h1 {
     font-size: 4rem;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 h2 {
@@ -20,13 +20,13 @@ h3 {
 h4 {
     font-size: 1rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--color-secondary);
 }
 
 h5 {
     font-size: 0.75rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--color-secondary);
 }
 
 p {
@@ -34,10 +34,10 @@ p {
 }
 
 :root {
-    --primary-color: #999AC6;
-    --secondary-color: #0B3954;
-    --light-color: #FFF9EC;
-    --dark-color: #798071;
-    --bright-color: #FF5A5F;
-    --background-color: #FCFAFA;
+    --color-primary: #999AC6;
+    --color-secondary: #0B3954;
+    --color-light: #FFF9EC;
+    --color-dark: #798071;
+    --color-bright: #FF5A5F;
+    --color-background: #FCFAFA;
 }
