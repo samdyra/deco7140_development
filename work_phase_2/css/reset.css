@@ -261,31 +261,6 @@ summary {
    Animation and Transition Reset
    ========================================================================== */
 
-/* Remove all animations, transitions, and transforms */
-*,
-*::before,
-*::after {
-    animation-delay: 0s !important;
-    animation-direction: normal !important;
-    animation-duration: 0s !important;
-    animation-fill-mode: none !important;
-    animation-iteration-count: 1 !important;
-    animation-name: none !important;
-    animation-play-state: running !important;
-    animation-timing-function: ease !important;
-
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-    transition-property: none !important;
-    transition-timing-function: ease !important;
-
-    transform: none !important;
-    transform-origin: 50% 50% 0 !important;
-    transform-style: flat !important;
-    perspective: none !important;
-    perspective-origin: 50% 50% !important;
-    backface-visibility: visible !important;
-}
 
 /* Reset keyframes (this won't remove existing keyframes but prevents new ones from being applied) */
 @keyframes none {
