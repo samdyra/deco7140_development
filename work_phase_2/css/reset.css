@@ -332,22 +332,22 @@ input[type="number"] {
 }
 
 /* Reset webkit tap highlight */
-* {
+/* * {
     -webkit-tap-highlight-color: transparent;
-}
+} */
 
 /* Reset webkit touch callout */
-* {
+/* * {
     -webkit-touch-callout: none;
-}
+} */
 
 /* Reset webkit user select */
-* {
+/* * {
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
-}
+} */
 
 /* ==========================================================================
    Print Reset
