@@ -312,3 +312,34 @@
         border-left-color: transparent;
     }
 }
+
+.accessibility-card {
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.accessibility-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accessibility-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.accessibility-card h4 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.accessibility-card p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
