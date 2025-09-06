@@ -12,6 +12,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     font-family: "Plus Jakarta Sans", 'Times New Roman', Times, serif;
+    margin-top: 20px;
 }
 
 h1 {

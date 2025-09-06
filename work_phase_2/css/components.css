@@ -254,13 +254,43 @@
 
 
 /* navigation */
-.nav {
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
     background-color: var(--primary-color);
-    padding: var(--spacing-4);
-    border-radius: var(--spacing-2);
-    margin-bottom: var(--spacing-6);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+}
+
+.nav-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 70px var(--spacing-4) var(--spacing-4);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav.nav-open {
+    right: 0;
 }
 
 .nav a {
@@ -268,7 +298,7 @@
     color: white;
     text-decoration: none;
     padding: var(--spacing-2) var(--spacing-4);
-    margin-bottom: var(--spacing-\1);
+    margin-bottom: var(--spacing-1);
     border-radius: var(--spacing-1);
     transition: all 0.3s ease;
     font-weight: 500;
@@ -288,13 +318,27 @@
 }
 
 @media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+
     .nav {
+        position: static;
+        right: auto;
+        width: auto;
+        height: auto;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         gap: var(--spacing-2);
         align-items: center;
         justify-content: center;
         padding: var(--spacing-6) var(--spacing-4);
+        border-radius: var(--spacing-2);
+        margin-bottom: var(--spacing-6);
+        margin-top: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: none;
     }
 
     .nav a {
@@ -312,6 +356,8 @@
         border-left-color: transparent;
     }
 }
+
+
 
 .accessibility-card {
     border: 1px solid var(--secondary-color);
