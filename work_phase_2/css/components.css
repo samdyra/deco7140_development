@@ -358,8 +358,7 @@
 }
 
 
-
-.accessibility-card {
+.assessment-card {
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
     padding: 20px;
@@ -370,22 +369,35 @@
     transition: box-shadow 0.3s ease;
 }
 
-.accessibility-card:hover {
+.assessment-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.accessibility-card h3 {
+.assessment-card h3 {
     color: var(--primary-color);
     margin-bottom: 12px;
 }
 
-.accessibility-card h4 {
+.assessment-card h4 {
     color: var(--secondary-color);
     margin-top: 15px;
     margin-bottom: 8px;
 }
 
-.accessibility-card p {
+.assessment-card p {
     line-height: 1.6;
     margin-bottom: 10px;
+}
+
+.assessment-card .solution {
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid var(--accent-color);
+    margin-top: 10px;
+}
+
+.assessment-card .solution h4 {
+    color: var(--accent-color);
+    margin-top: 0;
 }
