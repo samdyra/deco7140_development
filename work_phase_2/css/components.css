@@ -1,70 +1,3 @@
-/* INTERACTIVE HIGHLIGHTING FOR CLIENT NEEDS */
-/* Base Highlight Style */
-.interactive-highlight {
-    position: relative;
-    /* Allows for positioning of extra elements (e.g., tooltip numbers) */
-    background-color: rgba(255, 215, 0, 0.3);
-    /* Light yellow highlight with 30% transparency */
-    cursor: pointer;
-    /* Changes cursor to indicate interactivity */
-    padding: 2px 5px;
-    /* Adds small space inside the highlight for better readability */
-    border-radius: 5px;
-    /* Rounds the corners slightly for a softer look */
-    transition: background 0.3s ease;
-    /* Smooth transition effect when background changes */
-}
-
-/* Tooltip Styling for Highlighted Text */
-.interactive-highlight::after {
-    content: attr(data-card);
-    /* See the explanation */
-    position: absolute;
-    /* Positions the tooltip relative to the highlighted text */
-    top: -5px;
-    /* Moves the tooltip slightly above the highlighted text */
-    right: -15px;
-    /* Moves the tooltip slightly to the right of the highlighted text */
-    background: var(--accent-color);
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    width: 120px;
-    /* Sets a fixed width for the tooltip */
-    height: 30px;
-    /* Sets a fixed height, making the tooltip a perfect circle */
-    display: flex;
-    /* Uses Flexbox to center the text inside the circle */
-    align-items: center;
-    /* Vertically centers the text inside the tooltip */
-    justify-content: center;
-    /* Horizontally centers the text inside the tooltip */
-    border-radius: 10%;
-    /* Creates rounded corners */
-    opacity: 0;
-    /* Initially hides the tooltip */
-    transition: opacity 0.3s ease;
-    /* Smoothly fades in the tooltip by changing the opacity */
-}
-
-/* Show Number on Hover (Desktop) */
-@media (hover: hover) {
-    .interactive-highlight:hover::after {
-        opacity: 1;
-    }
-}
-
-/* Show Number on Tap (Mobile) */
-.interactive-highlight:focus::after,
-.interactive-highlight:active::after {
-    opacity: 1;
-}
-
-
-/* INTERACTIVE NAVBAR FOR USER STORIES */
-/* INTERACTIVE NAVBAR FOR USER STORIES */
-/* INTERACTIVE NAVBAR FOR USER STORIES */
-
 /* Base Highlight Style */
 .interactive-highlight-stories {
     position: relative;
@@ -376,6 +309,7 @@
 .assessment-card h3 {
     color: var(--primary-color);
     margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .assessment-card h4 {
@@ -400,4 +334,51 @@
 .assessment-card .solution h4 {
     color: var(--accent-color);
     margin-top: 0;
+}
+
+
+.assessment-card .interactive-highlight-stories {
+    position: relative;
+    background-color: rgba(231, 76, 60, 0.2);
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.assessment-card .interactive-highlight-stories:hover {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+.interactive-highlight-stories::after {
+    content: attr(data-card);
+    position: absolute;
+    top: -50px;
+    right: -15px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 240px;
+    padding: 12px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+@media (hover: hover) {
+    .interactive-highlight-stories:hover::after {
+        opacity: 1;
+    }
+}
+
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after {
+    opacity: 1;
 }
