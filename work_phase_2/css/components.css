@@ -1,17 +1,15 @@
-/* Base Highlight Style */
 .interactive-highlight-stories {
     position: relative;
-    /* Allows for positioning of extra elements (e.g., tooltip numbers) */
-    background-color: rgba(255, 215, 0, 0.3);
-    /* Light yellow highlight with 30% transparency */
+    background-color: rgba(231, 76, 60, 0.2);
     cursor: pointer;
-    /* Changes cursor to indicate interactivity */
     padding: 2px 5px;
-    /* Adds small space inside the highlight for better readability */
     border-radius: 5px;
-    /* Rounds the corners slightly for a softer look */
     transition: background 0.3s ease;
-    /* Smooth transition effect when background changes */
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.interactive-highlight-stories:hover {
+    background-color: rgba(231, 76, 60, 0.3);
 }
 
 /* Tooltip Styling for Highlighted Text */
@@ -59,7 +57,6 @@
 .interactive-highlight-stories:active::after {
     opacity: 1;
 }
-
 
 
 .value-box {
@@ -290,7 +287,9 @@
     }
 }
 
+/* navigation end */
 
+/* assessment-card (generic) */
 .assessment-card {
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
@@ -336,49 +335,4 @@
     margin-top: 0;
 }
 
-
-.assessment-card .interactive-highlight-stories {
-    position: relative;
-    background-color: rgba(231, 76, 60, 0.2);
-    cursor: pointer;
-    padding: 2px 5px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    border-bottom: 2px solid var(--accent-color);
-}
-
-.assessment-card .interactive-highlight-stories:hover {
-    background-color: rgba(231, 76, 60, 0.3);
-}
-
-.interactive-highlight-stories::after {
-    content: attr(data-card);
-    position: absolute;
-    top: -50px;
-    right: -15px;
-    background: var(--accent-color);
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    width: 240px;
-    padding: 12px;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-}
-
-@media (hover: hover) {
-    .interactive-highlight-stories:hover::after {
-        opacity: 1;
-    }
-}
-
-.interactive-highlight-stories:focus::after,
-.interactive-highlight-stories:active::after {
-    opacity: 1;
-}
+/* assessment-card (generic) end */

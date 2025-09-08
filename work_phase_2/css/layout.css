@@ -856,3 +856,7 @@
 .m-e-auto {
     margin-inline-end: auto;
 }
+
+.debug {
+    border: 1px solid red;
+}
