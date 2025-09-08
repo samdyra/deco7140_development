@@ -1,3 +1,63 @@
+/* assessment-card (generic) */
+.assessment-card {
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.assessment-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.assessment-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.assessment-card h4 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.assessment-card p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.assessment-card .solution {
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid var(--accent-color);
+    margin-top: 10px;
+}
+
+.assessment-card .solution h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.assessment-card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.assessment-card ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+    color: #333;
+}
+
+/* assessment-card (generic) end */
+
 .interactive-highlight-stories {
     position: relative;
     background-color: rgba(231, 76, 60, 0.2);
@@ -288,51 +348,3 @@
 }
 
 /* navigation end */
-
-/* assessment-card (generic) */
-.assessment-card {
-    border: 1px solid var(--secondary-color);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px 0;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--primary-color);
-    transition: box-shadow 0.3s ease;
-}
-
-.assessment-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.assessment-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.assessment-card h4 {
-    color: var(--secondary-color);
-    margin-top: 15px;
-    margin-bottom: 8px;
-}
-
-.assessment-card p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.assessment-card .solution {
-    background-color: rgba(231, 76, 60, 0.1);
-    padding: 10px;
-    border-radius: 5px;
-    border-left: 3px solid var(--accent-color);
-    margin-top: 10px;
-}
-
-.assessment-card .solution h4 {
-    color: var(--accent-color);
-    margin-top: 0;
-}
-
-/* assessment-card (generic) end */
