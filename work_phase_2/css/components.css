@@ -38,10 +38,21 @@
     margin-top: 10px;
 }
 
+.assessment-card .warning {
+    background-color: rgba(200, 231, 60, 0.1);
+    padding-top: 10px;
+    padding-bottom: 1px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    border-left: 3px solid yellow;
+}
+
 .assessment-card .solution h4 {
     color: var(--accent-color);
     margin-top: 0;
 }
+
+
 
 .assessment-card ul {
     padding-left: 20px;
@@ -60,6 +71,11 @@
     list-style-type: disc;
     color: white;
     font-size: 0.85rem;
+}
+
+.divider {
+    border-top: 2px solid var(--secondary-color);
+    margin-block: 10px;
 }
 
 /* assessment-card (generic) end */
