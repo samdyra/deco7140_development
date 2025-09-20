@@ -26,4 +26,7 @@ import { initAccordion } from "./modules/accordion.js";
 * */
 document.addEventListener("DOMContentLoaded", () => {
     initAccordion(".accordion");
+
+    initAccordion(".accordion.nested");
+
 });

@@ -43,3 +43,7 @@ h5 {
 p {
     font-size: 1rem;
 }
+
+.debug {
+    border: 1px solid red;
+}
