@@ -48,3 +48,9 @@ nav ul {
         display: block;
     }
 }
+
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
