@@ -1,134 +1,365 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+/* ==========================================================================
+   Comprehensive CSS Reset
+   A complete reset to provide a clean slate for web designs
+   ========================================================================== */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML and body reset */
+html {
+    line-height: 1.15;
+    /* Improve text rendering */
+    -webkit-text-size-adjust: 100%;
+    /* Prevent adjustments of font size after orientation changes in iOS */
+    -ms-text-size-adjust: 100%;
+    /* Prevent adjustments of font size after orientation changes in IE */
+}
+
+body {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+/* Remove list styles */
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+/* Reset headings */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Reset text elements */
 p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
+span,
+div,
+section,
 article,
 aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
 header,
-hgroup,
-menu,
+footer,
 nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+main {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* Reset links */
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+}
+
+/* Reset form elements */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    border: none;
+    background: transparent;
+    color: inherit;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
 }
 
-body {
-    line-height: 1;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-ol,
-ul {
-    list-style: none;
+/* Remove textarea resize handle */
+textarea {
+    resize: none;
 }
 
+/* Reset fieldset and legend */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+/* Reset table elements */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Reset media elements */
+img,
+video,
+audio,
+iframe,
+embed,
+object {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    vertical-align: top;
+}
+
+/* Reset SVG */
+svg {
+    fill: currentColor;
+    vertical-align: top;
+}
+
+/* Reset HR */
+hr {
+    border: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset code elements */
+code,
+pre,
+kbd,
+samp {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Reset quote elements */
 blockquote,
 q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
     content: '';
     content: none;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+/* Reset definition lists */
+dl,
+dt,
+dd {
+    margin: 0;
+}
+
+/* Reset address */
+address {
+    font-style: normal;
+}
+
+/* Reset abbreviations */
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+/* Reset bold and strong */
+b,
+strong {
+    font-weight: inherit;
+}
+
+/* Reset italic and emphasis */
+i,
+em {
+    font-style: inherit;
+}
+
+/* Reset small */
+small {
+    font-size: inherit;
+}
+
+/* Reset subscript and superscript */
+sub,
+sup {
+    font-size: inherit;
+    line-height: inherit;
+    position: static;
+    vertical-align: baseline;
+}
+
+/* Reset mark */
+mark {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Reset details and summary */
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+/* ==========================================================================
+   Animation and Transition Reset
+   ========================================================================== */
+
+
+/* Reset keyframes (this won't remove existing keyframes but prevents new ones from being applied) */
+@keyframes none {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   Focus and Accessibility Reset
+   ========================================================================== */
+
+/* Reset focus styles (you should add your own) */
+:focus {
+    outline: none;
+}
+
+/* Reset selection styles */
+::selection {
+    background: transparent;
+    color: inherit;
+}
+
+::-moz-selection {
+    background: transparent;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Browser-specific Reset
+   ========================================================================== */
+
+/* Reset webkit form controls */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* Reset webkit number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Reset Firefox number input */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Reset webkit scrollbars */
+::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Reset webkit tap highlight */
+/* * {
+    -webkit-tap-highlight-color: transparent;
+} */
+
+/* Reset webkit touch callout */
+/* * {
+    -webkit-touch-callout: none;
+} */
+
+/* Reset webkit user select */
+/* * {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+} */
+
+/* ==========================================================================
+   Print Reset
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+    }
 }
