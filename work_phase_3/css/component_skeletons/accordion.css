@@ -29,11 +29,12 @@
     font-size: 0.95rem;
 }
 
-.accordion-item.open .accordion-content {
+.accordion-item.open>.accordion-content {
     padding: 1rem;
     max-height: 500px;
     border: 1px solid black;
 }
+
 
 .accordion .nested {
     margin-left: 1rem;
