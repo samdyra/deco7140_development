@@ -1,0 +1,11 @@
+.visceral-header {
+    background: linear-gradient(135deg, var(--accent-color), #c0392b);
+}
+
+.behavioral-header {
+    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+}
+
+.reflective-header {
+    background: linear-gradient(135deg, var(--primary-color), #34495e);
+}

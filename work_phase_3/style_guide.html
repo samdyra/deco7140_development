@@ -8,22 +8,98 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/style_guide.css" />
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <title>Work Phase 3</title>
+    <title>Style Guide</title>
 </head>
 
 <body>
-    <!-- START PAGE STRUCTURE -->
-    <nav id="nav-mobile" aria-label="Mobile Navigation"></nav>
-    <nav id="nav-dekstop" aria-label="Dekstop Navigation"></nav>
+    <nav id="nav-mobile" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="site_map.html">Site Map</a></li>
+            <li><a href="style_guide.html">Guide</a></li>
+        </ul>
+    </nav>
+
+    <nav id="nav-dekstop" aria-label="Desktop Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visceral_design.html">Visceral</a></li>
+            <li><a href="behavioural_design.html">Behavioral</a></li>
+            <li><a href="reflective_design.html">Reflective</a></li>
+            <li><a href="site_map.html">Site Map</a></li>
+            <li><a href="style_guide.html">Style Guide</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1>WP3 Home Page</h1>
+        <div class="container">
+            <header class="m-b-8">
+                <h1 class="m-b-4">Style Guide</h1>
+                <h3 class="m-b-6">Sam's Style Guide Overview for the community sharing platform</h3>
+                <p class="m-b-8">
+                    This is the Style Guide for this work phase 3, outlining 3 main points
+                    of design: Visceral, Behavioral, and Reflective Design.
+                </p>
+            </header>
+
+            <section class="design-cards">
+                <article class="design-card m-b-6">
+                    <div class="card-header visceral-header">
+                        <h4>Visceral Design</h4>
+                    </div>
+                    <div class="card-content p-6">
+                        <p class="m-b-4">
+                            The immediate emotional response to visual design. Focuses on aesthetics,
+                            first impressions, and sensory appeal.
+                        </p>
+                        <ul class="design-features">
+                            <li>Color palette and visual hierarchy</li>
+                            <li>Typography and spacing</li>
+                            <li>Visual impact and appeal</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="design-card m-b-6">
+                    <div class="card-header behavioral-header">
+                        <h4>Behavioral Design</h4>
+                    </div>
+                    <div class="card-content p-6">
+                        <p class="m-b-4">
+                            The experience of use and functionality. Emphasizes usability,
+                            interaction patterns, and user efficiency.
+                        </p>
+                        <ul class="design-features">
+                            <li>Navigation and user flows</li>
+                            <li>Interactive components</li>
+                            <li>Responsive design patterns</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="design-card m-b-6">
+                    <div class="card-header reflective-header">
+                        <h4>Reflective Design</h4>
+                    </div>
+                    <div class="card-content p-6">
+                        <p class="m-b-4">
+                            The meaning and personal significance of the design. Considers cultural
+                            context, personal values, and long-term satisfaction.
+                        </p>
+                        <ul class="design-features">
+                            <li>Content strategy and messaging</li>
+                            <li>Brand identity and values</li>
+                            <li>User engagement and retention</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
-
-
 </body>
 
 </html>
