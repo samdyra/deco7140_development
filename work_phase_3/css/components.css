@@ -16,6 +16,7 @@ nav ul {
     width: 100vw;
     background-color: var(--secondary-color);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 #nav-mobile ul li a {
