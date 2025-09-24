@@ -10,24 +10,15 @@
 }
 
 .button-primary {
-    background-color: var(--color-primary);
+    background-color: var(--secondary-color);
     color: white;
 }
 
 .button-secondary {
-    background-color: var(--color-secondary);
+    background-color: var(--accent-color);
     color: white;
 }
 
-.button-dark {
-    background-color: var(--color-dark);
-    color: white;
-}
-
-.button-bright {
-    background-color: var(--color-bright);
-    color: black;
-}
 
 .button:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);

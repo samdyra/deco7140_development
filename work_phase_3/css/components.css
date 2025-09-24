@@ -2,6 +2,10 @@
 @import './component_skeletons/gallery.css';
 @import './component_skeletons/card.css';
 @import './component_skeletons/navbar.css';
+@import './component_skeletons/forms.css';
+@import './component_skeletons/button.css';
+
+
 
 
 .responsive-img {
