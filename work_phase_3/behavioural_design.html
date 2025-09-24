@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/page_css/style_guide.css" />
+    <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <title>Style Guide</title>
+    <title>Behavioral Design - Work Phase 3</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="site_map.html">Site Map</a></li>
-            <li><a aria-current="page" href="style_guide.html">Guide</a></li>
+            <li><a href="style_guide.html">Guide</a></li>
         </ul>
     </nav>
 
@@ -37,9 +37,63 @@
 
     <main>
         <div class="container">
+            <article class="form-section m-b-12">
+                <h2 class="m-b-6">Community Engagement Form</h2>
+                <p class="m-b-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam perferendis, voluptas optio velit
+                    facilis modi quo, fuga corporis recusandae, expedita officiis. Cupiditate laborum delectus quia
+                    dolore ex nisi quibusdam aliquam?
+                </p>
 
+                <form id="community-form" class="community-form" novalidate>
+                    <div class="form-group m-b-4">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required
+                            aria-describedby="name-error">
+                        <span id="name-error" class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group m-b-4">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required
+                            aria-describedby="email-error">
+                        <span id="email-error" class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group m-b-4">
+                        <label for="message" class="form-label">Message or Introduction</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="4"
+                            placeholder="Tell us about yourself or share your thoughts..."
+                            aria-describedby="message-help"></textarea>
+                        <span id="message-help" class="form-help">Optional: Share any additional information</span>
+                    </div>
+
+                    <div class="form-group m-b-6">
+                        <label for="photo" class="form-label">Photo Upload</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="photo" name="photo" class="form-file" accept="image/*"
+                                aria-describedby="photo-help">
+                            <label for="photo" class="file-upload-label">
+                                <span class="file-upload-text">Choose a photo</span>
+                                <span class="file-upload-button">Browse</span>
+                            </label>
+                        </div>
+                        <span id="photo-help" class="form-help">Optional: Upload an image (max 10MB)</span>
+                        <span id="photo-error" class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button button-primary">Submit</button>
+                        <button type="reset" class="button button-secondary">Reset Form</button>
+                    </div>
+
+                    <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                </form>
+            </article>
         </div>
     </main>
+
+    <script type="module" src="js/behavioural_design.js"></script>
 </body>
 
 </html>
