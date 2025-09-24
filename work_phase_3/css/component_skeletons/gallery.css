@@ -1,0 +1,39 @@
+/* Image Gallery Styles */
+.image-gallery {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item h4 {
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
