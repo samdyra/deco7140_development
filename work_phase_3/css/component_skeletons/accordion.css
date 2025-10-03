@@ -31,7 +31,7 @@
 
 .accordion-item.open>.accordion-content {
     padding: 1rem;
-    max-height: 500px;
+    max-height: 1200px;
     border: 1px solid black;
 }
 
