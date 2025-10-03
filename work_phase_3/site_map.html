@@ -60,18 +60,45 @@
                                     <p>
                                         "Community Representation" and "Create Meaningful Connections" value that have
                                         been established is designed to so that
-                                        people can express, share, and connect with others in their community. I
-                                        specified that some of the needs are to people to share their stories,
-                                        experiences,
-                                        and ideas through various medias.
+                                        people can express, share, and connect with others in their community.
+
+                                        Based on the needs derived from the values and user stories, users need a "way"
+                                        to express their community identity and cultural background. In addition, the
+                                        needs of "connecting with others"
+                                        through communities, contents, and events, are also important to be fulfilled.
+
+
+                                        <br />
+                                        <br />
 
                                         This Crumbs feature is exists to cover those values and needs.
                                         Crumbs is like a tweet in Twitter, or a post in Facebook, but in this case, it
                                         is a way for people to represent their community and connect with others by
-                                        sharing posts, community events, and traditional cuisines recipes.
+                                        sharing general text-based posts, community events, and traditional cuisines
+                                        recipes.
 
-                                        The Crumbs page is designed to be user-friendly and accessible to all users,
-                                        thorugh beginner friendly guides and accessibility considerations.
+
+                                        <br />
+                                        <br />
+
+                                        text-based posts are called Runes, community events are called OZvents
+                                        (pronounced "Ozzeevents"), and traditional cuisine recipes are called
+                                        (Crumbings).
+
+
+                                        <br />
+                                        <br />
+
+                                        Since the potential users needs ease of use and accesible applications, The
+                                        Crumbs page is designed to be user-friendly and accessible to all users,
+                                        thorugh beginner friendly guides and accessibility considerations. For first
+                                        time users, a
+                                        step by step guideline/tutorial will be shown to help them understand how to
+                                        navigate and utilize this page.
+
+
+                                        <br />
+                                        <br />
 
                                         In details, crumbs can be three types a general text-based post like
                                         Reddit/Twitter, a Community Event Promotion, or a Traditional Cuisine Recipe
@@ -86,6 +113,10 @@
                                                 This feature is created to make it easier for user to find relevant
                                                 crumbs
                                                 based on their preferences.
+
+                                                <br />
+                                                <br />
+
                                                 As the search bar is actually a form input and to adhere to WCAG 3.3.2
                                                 (Labels and Instructions), Labels and Instructions regarding what
                                                 is required to fill will be made visible to the users.
@@ -94,16 +125,121 @@
                                     </div>
 
                                     <div class="accordion-item m-y-6">
-                                        <button class="accordion-header">▷ Search/Filter Crumbs</button>
+                                        <button class="accordion-header">▷ Create Crumbs</button>
                                         <div class="accordion-content">
                                             <p>
-                                                The top part of the crubms page is a search and filter feature.
-                                                This feature is created to make it easier for user to find relevant
-                                                crumbs
-                                                based on their preferences.
-                                                As the search bar is actually a form input and to adhere to WCAG 3.3.2
+                                                In order to create crumbs, user can click the floating action button
+                                                in the bottom right of the screen. This button will popup a modal with
+                                                different forms
+                                                based on what we what type of crumbs the user want to create. User can
+                                                also
+                                                opt to geolocate the crumbs, so that it will shows on the CrumbsMap
+                                                Page.
+
+
+                                                <br />
+                                                <br />
+
+                                                Similiar to search bar, this form input and to adhere to WCAG 3.3.2
                                                 (Labels and Instructions), Labels and Instructions regarding what
                                                 is required to fill will be made visible to the users.
+
+                                                Also, error identification and suggestions will also be implemented when
+                                                filling the different form fields to adhere to WCAG 3.3.1 (Error
+                                                Identification)
+
+
+                                                <br />
+                                                <br />
+
+                                                To mitigate the risk of unathorized personal data collection, appropiate
+                                                popup to confirm the user whether to share their location will be
+                                                provided,
+                                                so that every post that are geolocated will always be consented by the
+                                                user.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item m-y-6">
+                                        <button class="accordion-header">▷ List of Crumbs</button>
+                                        <div class="accordion-content">
+                                            <p>
+                                                The list of crumbs (FeedCrumbs) is the main content of this Crumbs. It
+                                                shows the
+                                                list of relevant crumbs based on the user's search and filter
+                                                preferences.
+
+
+                                                <br />
+                                                <br />
+
+                                                Each crumbs will show the author, a "tag" that showing their community
+                                                representation, and profile image, main title of the crumb, and the
+                                                content (in short) of the crumb.
+
+
+                                                <br />
+                                                <br />
+
+                                                In order to mitigate an ethical risk of cultural misunderstanding, each
+                                                crumbs will also
+                                                be supported with Community Note (like X), so that each user can give
+                                                a context if something is unclear or misunderstood.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item m-y-6">
+                                        <button class="accordion-header">▷ Community Notes</button>
+                                        <div class="accordion-content">
+                                            <p>
+                                                As described in FeedCrumbs, each crumb may have commnunity notes if
+                                                necessary.
+                                                Everyone can add community notes, but to improve the quality of
+                                                community notes, each time
+                                                a Crumb is flagged as "need to check" by the system, the community
+                                                representative will be the
+                                                first to be notified to add a community note.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item m-y-6">
+                                        <button class="accordion-header">▷ Detail and Interaction</button>
+                                        <div class="accordion-content">
+                                            <p>
+                                                As each crumbs is different, and may have differet types of content,
+                                                users
+                                                can see the detail of each crumbs by tap on each of crumbs. Users can
+                                                interact such as like, comment, share, and save each crumbs.
+
+                                                <br />
+                                                <br />
+
+
+
+                                                for Crumbings (traditional cuisine recipe posts), users can also
+                                                rate and "compete" to cook the recipe by sharing their own version of
+                                                the recipe, and will be judged by the number of likes and comments. This
+                                                leaderboard feature
+                                                will be made in the the Crumbings Leaderboard page.
+
+
+                                                <br />
+                                                <br />
+
+
+                                                for OZvents (community event promotion posts), users can but the ticket
+                                                for the event, or share the event to others.
+
+                                                <br />
+                                                <br />
+
+
+                                                for Runes (general text-based posts), users can like, comment, and
+                                                replies,
+                                                and share the post to others, similiar to reddit.
                                             </p>
                                         </div>
                                     </div>
