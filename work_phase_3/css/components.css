@@ -5,11 +5,26 @@
 @import './component_skeletons/forms.css';
 @import './component_skeletons/button.css';
 
-
-
-
 .responsive-img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+
+.sitemap h1 {
+    font-size: 2rem;
+    font-style: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sitemap img {
+    margin-block: 2rem;
+}
+
+@media (min-width: 768px) {
+    .sitemap h1 {
+        font-size: 3rem;
+    }
 }
