@@ -143,8 +143,8 @@
 /* Desktop Layout */
 @media (min-width: 768px) {
     .sidebar {
-        width: 600px;
-        right: -600px;
+        width: 1200px;
+        right: -1200px;
     }
 
     .sidebar-content {
@@ -154,7 +154,7 @@
     }
 
     .sidebar-image-wrapper {
-        flex: 0 0 50%;
+        flex: 0 0 60%;
     }
 
     .sidebar-annotation {
