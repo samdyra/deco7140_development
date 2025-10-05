@@ -84,16 +84,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.font-name {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
 .font-fallback {
-    color: #666;
     font-style: italic;
 }
 
@@ -108,11 +99,6 @@
     border-left: 4px solid var(--secondary-color);
 }
 
-.type-sample {
-    margin: 0;
-    flex: 1;
-}
-
 .type-details {
     display: flex;
     flex-direction: column;
@@ -120,20 +106,8 @@
     text-align: left;
 }
 
-.type-size {
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 0.9rem;
-}
-
-.type-weight {
-    color: var(--secondary-color);
-    font-size: 0.85rem;
-}
 
 .type-usage {
-    color: #666;
-    font-size: 0.8rem;
     font-style: italic;
 }
 
