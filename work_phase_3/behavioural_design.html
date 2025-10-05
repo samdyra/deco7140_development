@@ -126,54 +126,107 @@ On creating the Card component, the WCAG principles of Meaningful Sequence is im
             <article class="form-section m-b-12">
                 <h3 class="m-b-6">Community Engagement Form</h3>
                 <p class="m-b-6">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam perferendis, voluptas optio velit
-                    facilis modi quo, fuga corporis recusandae, expedita officiis. Cupiditate laborum delectus quia
-                    dolore ex nisi quibusdam aliquam?
+                    To minimize errors, and make the users fill the form in the community form, the form implement the
+                    WCAG 3.3.2 (Labels and Instructions) by adding labels on each of the form inputs. We also use input
+                    types and field constraints, for example in the email address, we have to format the email address
+                    based on an actual email address structure. We also indicate the required and optional field by *
+                    sign.
                 </p>
 
                 <form id="community-form" class="community-form" novalidate>
-                    <div class="form-group m-b-4">
-                        <label for="name" class="form-label">Full Name *</label>
-                        <input type="text" id="name" name="name" class="form-input" required
-                            aria-describedby="name-error">
-                        <span id="name-error" class="error-message" aria-live="polite"></span>
-                    </div>
 
-                    <div class="form-group m-b-4">
-                        <label for="email" class="form-label">Email Address *</label>
-                        <input type="email" id="email" name="email" class="form-input" required
-                            aria-describedby="email-error">
-                        <span id="email-error" class="error-message" aria-live="polite"></span>
-                    </div>
+                    <!-- Fieldset 1: Personal Information (Conceptual Model - Logical Grouping) -->
+                    <fieldset class="form-fieldset m-b-6">
+                        <legend class="form-legend">Personal Information</legend>
 
-                    <div class="form-group m-b-4">
-                        <label for="message" class="form-label">Message or Introduction</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="4"
-                            placeholder="Tell us about yourself or share your thoughts..."
-                            aria-describedby="message-help"></textarea>
-                        <span id="message-help" class="form-help">Optional: Share any additional information</span>
-                    </div>
-
-                    <div class="form-group m-b-6">
-                        <label for="photo" class="form-label">Photo Upload</label>
-                        <div class="file-upload-wrapper">
-                            <input type="file" id="photo" name="photo" class="form-file" accept="image/*"
-                                aria-describedby="photo-help">
-                            <label for="photo" class="file-upload-label">
-                                <span class="file-upload-text">Choose a photo</span>
-                                <span class="file-upload-button">Browse</span>
+                        <div class="form-group m-b-4">
+                            <label for="name" class="form-label">
+                                Full Name
+                                <span class="required-indicator" aria-label="required">*</span>
                             </label>
+                            <input type="text" id="name" name="name" class="form-input" required
+                                aria-describedby="name-error name-help" aria-required="true">
+                            <span id="name-help" class="form-help">
+                                <span class="help-icon" aria-hidden="true">ℹ️</span>
+                                Please enter your first and last name
+                            </span>
+                            <span id="name-error" class="error-message" role="alert" aria-live="assertive"></span>
                         </div>
-                        <span id="photo-help" class="form-help">Optional: Upload an image (max 10MB)</span>
-                        <span id="photo-error" class="error-message" aria-live="polite"></span>
-                    </div>
 
+                        <div class="form-group m-b-4">
+                            <label for="email" class="form-label">
+                                Email Address
+                                <span class="required-indicator" aria-label="required">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input" required
+                                aria-describedby="email-error email-help" aria-required="true">
+                            <span id="email-help" class="form-help">
+                                <span class="help-icon" aria-hidden="true">ℹ️</span>
+                                We'll never share your email with anyone
+                            </span>
+                            <span id="email-error" class="error-message" role="alert" aria-live="assertive"></span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Fieldset 2: Your Message (Conceptual Model - Logical Grouping) -->
+                    <fieldset class="form-fieldset m-b-6">
+                        <legend class="form-legend">Your Message</legend>
+
+                        <div class="form-group m-b-4">
+                            <label for="message" class="form-label">
+                                Message or Introduction
+                                <span class="optional-indicator">(Optional)</span>
+                            </label>
+                            <textarea id="message" name="message" class="form-textarea" rows="4"
+                                placeholder="Tell us about yourself or share your thoughts..."
+                                aria-describedby="message-help"></textarea>
+                            <span id="message-help" class="form-help">
+                                <span class="help-icon" aria-hidden="true">💬</span>
+                                Optional: Share any additional information
+                            </span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Fieldset 3: Photo Upload (Conceptual Model - Logical Grouping) -->
+                    <fieldset class="form-fieldset m-b-6">
+                        <legend class="form-legend">
+                            Profile Photo
+                            <span class="optional-indicator">(Optional)</span>
+                        </legend>
+
+                        <div class="form-group m-b-4">
+                            <label for="photo" class="form-label">Photo Upload</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="photo" name="photo" class="form-file" accept="image/*"
+                                    aria-describedby="photo-help photo-error">
+                                <label for="photo" class="file-upload-label" tabindex="0">
+                                    <span class="file-upload-icon" aria-hidden="true">📷</span>
+                                    <span class="file-upload-text">Choose a photo</span>
+                                    <span class="file-upload-button">Browse</span>
+                                </label>
+                            </div>
+                            <span id="photo-help" class="form-help">
+                                <span class="help-icon" aria-hidden="true">🖼️</span>
+                                Optional: Upload an image (max 10MB)
+                            </span>
+                            <span id="photo-error" class="error-message" role="alert" aria-live="assertive"></span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Form Actions -->
                     <div class="form-actions">
-                        <button type="submit" class="button button-primary">Submit</button>
-                        <button type="reset" class="button button-secondary">Reset Form</button>
+                        <button type="submit" class="button button-primary">
+                            <span class="button-icon" aria-hidden="true">✓</span>
+                            Submit
+                        </button>
+                        <button type="reset" class="button button-secondary">
+                            <span class="button-icon" aria-hidden="true">↺</span>
+                            Reset Form
+                        </button>
                     </div>
 
-                    <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                    <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true">
+                    </div>
                 </form>
             </article>
             <div class="p-y-24"></div>
