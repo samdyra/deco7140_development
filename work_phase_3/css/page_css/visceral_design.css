@@ -43,7 +43,11 @@
     background-color: var(--secondary-color);
 }
 
-.accent-color {
+.accent-color-bg {
+    background-color: var(--accent-bg);
+}
+
+.accent-color-text {
     background-color: var(--accent-color);
 }
 
