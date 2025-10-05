@@ -274,26 +274,6 @@ summary {
 }
 
 /* ==========================================================================
-   Focus and Accessibility Reset
-   ========================================================================== */
-
-/* Reset focus styles (you should add your own) */
-:focus {
-    outline: none;
-}
-
-/* Reset selection styles */
-::selection {
-    background: transparent;
-    color: inherit;
-}
-
-::-moz-selection {
-    background: transparent;
-    color: inherit;
-}
-
-/* ==========================================================================
    Browser-specific Reset
    ========================================================================== */
 

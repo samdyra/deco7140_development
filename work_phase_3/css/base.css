@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
     --primary-color: #8B4513;
@@ -11,33 +11,56 @@
 body {
     color: var(--text-color);
     background-color: var(--background-color);
-    font-family: "Plus Jakarta Sans", 'Times New Roman', Times, serif;
+    font-family: 'Inter', -apple-system, Arial, sans-serif;
     margin-top: 20px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: 4rem;
-    color: var(--color-primary);
+    /* dynamic based on space */
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+    /* 64px - your starting point */
+    color: var(--primary-color);
+    font-weight: 700
 }
 
 h2 {
-    font-size: 3rem;
+    /* dynamic based on space */
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.472rem);
+    /* 4 ÷ 1.618 = 39.5px */
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.528rem;
+    /* 2.472 ÷ 1.618 = 24.5px */
 }
 
 h4 {
     font-size: 1rem;
+    /* 1.528 ÷ 1.618 = 0.944rem ≈ NORMALIZED to 1rem (16px, same as body) */
     font-weight: bold;
-    color: var(--color-secondary);
+    color: var(--secondary-color);
 }
 
 h5 {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
+    /* 1 ÷ 1.618 = 0.618rem (9.9px) - TOO SMALL, NORMALIZED to 14px */
     font-weight: bold;
-    color: var(--color-secondary);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    /* Makes small size work better */
+    letter-spacing: 0.05em;
 }
 
 p {
