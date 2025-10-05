@@ -30,8 +30,7 @@
 }
 
 .breadcrumbs-link {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 2rem;
 }
 
 .breadcrumbs-link a {
@@ -43,8 +42,8 @@
     font-weight: bold;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .breadcrumbs-link {
         display: none
     }
-}
+} */

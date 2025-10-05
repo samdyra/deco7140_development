@@ -1,4 +1,6 @@
 import { postFormData } from './modules/postFormData.js';
+import { closeSidebar, openSidebar } from "./modules/gallery_sidebar.js";
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('community-form');
@@ -43,4 +45,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         console.error('Failed to fetch community members:', data);
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            openSidebar(item);
+        });
+    });
+
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Add close button listener
+    const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', closeSidebar);
 });
