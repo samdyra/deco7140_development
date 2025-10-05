@@ -129,8 +129,10 @@ On creating the Card component, the WCAG principles of Meaningful Sequence is im
                     To minimize errors, and make the users fill the form in the community form, the form implement the
                     WCAG 3.3.2 (Labels and Instructions) by adding labels on each of the form inputs. We also use input
                     types and field constraints, for example in the email address, we have to format the email address
-                    based on an actual email address structure. We also indicate the required and optional field by *
-                    sign.
+                    based on an actual email address structure, if the field is not filled correctly, a red border will
+                    appear. We also indicate the required and optional field by * sign, and a feedback of red borders
+                    will appear if the required input is not filled.
+
                 </p>
 
                 <form id="community-form" class="community-form" novalidate>
