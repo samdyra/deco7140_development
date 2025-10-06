@@ -18,6 +18,8 @@
     text-align: left;
     border: none;
     cursor: pointer;
+    background-color: var(--primary-color);
+    color: white
 }
 
 .accordion-content {
@@ -40,4 +42,13 @@
     margin-left: 1rem;
     border-left: 3px solid black;
     padding-left: 1rem;
+}
+
+.accordion.nested .accordion-header {
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.accordion.nested .accordion-content {
+    border-radius: 0 0 10px 10px;
 }

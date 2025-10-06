@@ -11,6 +11,12 @@
     height: auto;
 }
 
+.small-responsive-img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+}
+
 
 .sitemap h1 {
     /* font-size: 2rem;
