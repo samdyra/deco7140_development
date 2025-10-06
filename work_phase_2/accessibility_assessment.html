@@ -29,44 +29,54 @@
 
         <section class="m-t-6 p-b-24">
             <div class="assessment-card">
-                <h3>1. Consistent Navigation (AA)</h3>
+                <h3>1. Alternative Text for Non-text Content (WCAG 1.1.1 - Level A)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Lily (Visually Impaired person):</strong> "small and I cannot make it bigger
+                    easily. Also, many posts have photos with text inside, and I cannot read those at all."
+                </p>
+                <p>
+                    <strong>From Client Brief (Value 2):</strong> "Provide clear, accessible information and resources
+                    to
+                    users."
+                </p>
+
                 <h4>Success Criteria:</h4>
                 <p>
-                    Navigation mechanisms (changing pages) within a web page must have the same relative
-                    order and structure, unless the user itself deliberately changes it.
+                    "All non-text content that is presented to the user has a text alternative that serves the
+                    equivalent purpose"
                 </p>
-                <h4>Implementation on my website:</h4>
+
+                <h4>Implementation on My Website:</h4>
                 <p>
-                    I will use it on my website because the website I create will contain multiple pages
-                    and each of them have different content. Therefore, the consistent navigation UI and
-                    mechanism will make the website easier to be navigated by the user. In order to do
-                    this, I will create one navigation bar, and use it for every page I created.
+                    All the content created such as posts or recipes, will include alternative texts to explain the
+                    dish. Same things with other contents, such as
+                    event photos, or user activities in communities etc.
                 </p>
             </div>
+
             <div class="assessment-card">
-                <h3>2. Consistent Identification (Level AA)</h3>
+                <h3>2. Contrast (Minimum) (WCAG 1.4.3 - Level AA)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Lily:</strong> "many websites use
+                    gray text on white, or white text on light colors - I cannot read this at all!"
+                </p>
+                <p>
+                    <strong>From Client Brief (Value 4):</strong> "Ensure ethical, inclusive, and culturally sensitive
+                    design principles are upheld."
+                </p>
+
                 <h4>Success Criteria:</h4>
                 <p>
-                    Part of the websites that have the same function within the website must be identified in the same
-                    way.
+                    "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except
+                    for Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+                    "
                 </p>
-                <h4>Implementation on my website:</h4>
-                <p>
-                    I will use the same color scheme and UI components for the same type of content, for example
-                    using the same color for all the headings and the same colors/shapes for all the buttons.
-                    Furtheremore,
-                    I believe some features such as thread/timeline will be usable in many places, and applying
-                    this consistent identification will make the app easier for the user to use, and also make the
-                    development faster too since I dont have to make the same things twice.
-                </p>
-            </div>
-            <div class="assessment-card">
-                <h3>3. Contrast (Minimum) (Level AA)</h3>
-                <h4>Success Criteria:</h4>
-                <p>
-                    The UI within the application should have a certain level of contrast compared to the background.
-                </p>
-                <h4>Implementation on my website:</h4>
+
+                <h4>Implementation on My Website:</h4>
                 <p>
                     I will create a proper color scheme that has a good contrast ratio between the colors. Furtheremore,
                     I will make sure the usage of this color scheme is appropriate too, by creating UI components that
@@ -74,6 +84,216 @@
                     it use the UI components.
                 </p>
             </div>
+
+            <div class="assessment-card">
+                <h3>3. Resize Text (WCAG 1.4.4 - Level AA)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Lily:</strong> "I need big letters, or at least option to make them bigger. Many
+                    websites have tiny text and when I try to zoom, everything becomes... messy? Words go outside the
+                    page, buttons disappear. This is very frustrating."
+                </p>
+                <p>
+                    <strong>From Client Brief (Value 4):</strong> "Accessibility must be prioritised to ensure seamless
+                    interaction for all users, including those relying on assistive technologies."
+                </p>
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "Except for captions and images of text, text can be resized without assistive technology up to 200
+                    percent without loss of content or functionality."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    When creating my visceral design code templates for texts, I will make sure the texts are using rem
+                    em instead
+                    of px, so that the texts can be resized properly when user zoomed in. I will also make sure that
+                    components I created
+                    are responsive and still appropiately shown even when zoomed in.
+                </p>
+            </div>
+
+            <div class="assessment-card">
+                <h3>4. Keyboard Navigations (WCAG 2.1.1 - Level A)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Client Brief (Value 4):</strong> " Ensure ethical, inclusive, and culturally sensitive
+                    design principles are upheld." - All users should be able to access the website using keyboard only,
+                    to ensure inclusive design principles are upheld.
+                    method.
+                </p>
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "All functionality of the content is operable through a keyboard interface without requiring
+                    specific timings for individual keystrokes, except where the underlying function requires input that
+                    depends on the path of the user's movement and not just the endpoints."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    Interactive elemtengs (elements that can be clicked, typed etc) will be focusable using Tab key,
+                    and can be activated using Enter or Space key. This will make sure buttons, links, forms etc can be
+                    accessed using keyboard only.
+                </p>
+            </div>
+
+            <div class="assessment-card">
+                <h3>5. Focus Visible (WCAG 2.4.7 - Level AA)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Johnny (Limited Tech Skills):</strong> "So if it's like... easy to navigate and doesn't
+                    have heaps of confusing menus and
+                    buttons, that'd be perfect."
+                </p>
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is
+                    visible."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    Interactive elements will have focus indicators, such as borders, different colors, additional
+                    shadow etc. These interactive elements include buttons, links, form inputs etc.
+                </p>
+            </div>
+
+            <div class="assessment-card">
+                <h3>6. Reading Level (WCAG 3.1.5 - Level AAA)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Mike:</strong> "simple language is most important for me. When website use very
+                    complicated words or long
+                    sentences, I get confused and sometimes just close the website. I like when they use everyday
+                    words
+                    that I already know."
+                </p>
+                <p>
+                    <strong>From Client Brief (Value 2):</strong> "Provide clear, accessible information and resources
+                    to
+                    users"
+                </p>
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "When text requires reading ability more advanced than the lower secondary education level after
+                    removal of proper names and titles, supplemental content, or a version that does not require reading
+                    ability more advanced than the lower secondary education level, is available."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    All contents created in the websites, such the menus, descriptions, tutorials etc, will use simple
+                    language that is easy to understand. In the wiki creation feature, creators will also be encouraged
+                    to use
+                    simple yet descriptive words in order to make the content easy to understand.
+                </p>
+            </div>
+
+
+            <div class="assessment-card">
+                <h3>7. Consistent Navigation (WCAG 3.2.3 - Level AA)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Mike:</strong> "Clear navigation is important too. I don't like when there are too many
+                    buttons or menus everywhere.
+                    I get lost easily! Simple menu at top with clear names like "Events", "Food", "Community" - that's
+                    perfect for me."
+                </p>
+                <p>
+                    <strong>From Johnny:</strong> "But there's definitely some apps that do my head in. Like, anything
+                    to do with school work or
+                    "educational" stuff usually sucks. They try to cram way too much information on one screen, and
+                    there's always like fifty different menus and tabs and things. I just want to find what I need
+                    quickly, not spend ages clicking through stuff."
+                </p>
+
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "Navigational mechanisms that are repeated on multiple web pages within a set of web pages occur in
+                    the same relative order each time they are repeated, unless a change is initiated by the user."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    I will use it on my website because the website I create will contain multiple pages
+                    and each of them have different content. Therefore, the consistent navigation UI and
+                    mechanism will make the website easier to be navigated by the user. In order to do
+                    this, I will create one navigation bar, and use it for every page I created.
+                </p>
+            </div>
+
+            <div class="assessment-card">
+                <h3>8. Error Identification (WCAG 3.3.1 - Level A)</h3>
+
+                <h4>User Needs Identified:</h4>
+                <p>
+                    <li>"Event creation platform for community organized events"</li>
+                    <li>"Timeline based system to share traditional cuisines, ideas, and events"</li>
+
+                    This timeline systems and event creations platform will definitely need forms to
+                    submit the data. Therefore, error identification is important to make sure the user
+                    can submit the form properly.
+                </p>
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "If an input error is automatically detected, the item that is in error is identified and the error
+                    is described to the user in text."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    Form validations will be implemeneted everytime there is a form in the website, such as
+                    event creation form, recipe submission form, community creation form, etc. In doing so,
+                    users will know if there is something wrong with what the form filled.
+                </p>
+            </div>
+
+            <div class="assessment-card">
+                <h3>9. Labels and Instructions (WCAG 3.3.2 - Level A)</h3>
+
+                <h4>User Need Identified:</h4>
+                <p>
+                    <strong>From Mike (Limited English):</strong> "I also try to use Google, but sometimes I don't know
+                    what words to search. Like, should I search
+                    "multicultural community Australia" or "ethnic groups" or something else? My English vocabulary
+                    is
+                    not so big yet.
+                    My friend from India told me about something called "Meetup" - I think it's website or app? But
+                    I
+                    haven't try yet because I'm bit shy to join group where I don't know anyone.."
+                </p>
+                <p>
+                    <strong>From Client Brief (Value 2):</strong> "Provide clear, accessible information and resources
+                    to users."
+                </p>
+
+                <h4>Success Criteria:</h4>
+                <p>
+                    "Labels or instructions are provided when content requires user input."
+                </p>
+
+                <h4>Implementation on My Website:</h4>
+                <p>
+                    Forms created in the website will also have labeling and instructions on what to fill. For example,
+                    when creating recipes in the recipe submission form,
+                    there will be labels and instructions such as "Recipe Name (e.g., Rendang, Pavlova)".
+                </p>
+            </div>
+
+
+
+
         </section>
     </div>
     <script type="module" src='js/accessibility_assessment.js'></script>
