@@ -8,21 +8,322 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
-
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
     <title>Work Phase 3</title>
 </head>
 
 <body>
-    <!-- START PAGE STRUCTURE -->
-    <nav id="nav-mobile" aria-label="Mobile Navigation"></nav>
-    <nav id="nav-dekstop" aria-label="Dekstop Navigation"></nav>
+    <nav id="nav-mobile" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="index.html"><span class="icon">🏚️</span></a></li>
+            <li><a href="site_map.html"><span class="icon">🗺️</span></a></li>
+            <li><a href="style_guide.html"><span class="icon">🖼️</span></a></li>
+            <li><a href="ethical_response.html"><span class="icon">🧑‍💻</span></a></li>
+            <li><a href="genai_mt_acknowledgement.html" aria-current="page"><span class="icon">💻</span></a></li>
+        </ul>
+    </nav>
+    <nav id="nav-dekstop" aria-label="Dekstop Navigation">
+        <ul>
+            <li><a href="index.html"><span class="icon">Home</span></a></li>
+            <li><a href="site_map.html"><span class="icon">Site Map</span></a></li>
+            <li><a href="style_guide.html"><span class="icon">Style Guide</span></a></li>
+            <li><a href="ethical_response.html"><span class="icon">Ethical Response</span></a></li>
+            <li><a href="genai_mt_acknowledgement.html" aria-current="page"><span class="icon">Gen AI</span></a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1>WP3 Home Page</h1>
-    </main>
+        <div class="container">
 
+            <h1 class="p-t-8">
+                Generative AI Tools Acknowledgement
+            </h1>
+            <section class="m-t-6">
+                <div class="base-card">
+                    <h3 class="m-b-4">1. Overview of Usage</h3>
+                    <table class="reflective-table">
+                        <thead>
+                            <tr>
+                                <th>Tool</th>
+                                <th>Use or Purpose</th>
+                                <th>Prompt or Action (in summary)</th>
+                                <th>Section Affected</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Claude</td>
+                                <td>
+                                    I wanted to understand more about Gestalt Principles especially in creating the
+                                    wireframe. I ask Claude to explain more about the principles that I should
+                                    considering based on different sections of the wireframe, and give me some
+                                    feedbacks on my existing wireframe annotations.
+                                </td>
+                                <td>
+                                    "Can you explain more about Gestalt Principles, especially in creating a
+                                    wireframe?"
+                                </td>
+                                <td>Wireframe in the behavorial page</td>
+                                <td>5 Oct 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>
+                                    I have difficulties following the IA slides on creating the gallery component,
+                                    somehow
+                                    the styling given is not working well with my existing code. Therefore I ask
+                                    AI to help me create a simple gallery component that I can implement to my existing
+                                    code.
+                                </td>
+                                <td>
+                                    "Can you give me ideas on how to improve my existing gallery component? Here is
+                                    my existing gallery component, can you give me some references on how to improve
+                                    it?"
+                                </td>
+                                <td>Gallery used in Visceral Design and Behavioral Design</td>
+                                <td>24 September 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>
+                                    Same as above, I have difficulties following the IA slides on creating the
+                                    sidebar component that opens up when clicking on the images in the gallery.
+                                </td>
+                                <td>
+                                    "Can you give me ideas on how to create a sidebar that opens up when clicking
+                                    on the images in the gallery? Here is my existing gallery component, I wanted
+                                    to create a sidebar that opens up when clicking on the images in the gallery,
+                                    can you give me some guidance on how to create it?"
+                                </td>
+                                <td>Side Bar in Gallery</td>
+                                <td>5 Oct 2025</td>
+
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>Improve contrast in my color scheme, since
+                                    I violate the minimum contrast ratio of 4.5:1 between text and background color.
+                                </td>
+                                <td>
+                                    "Can you give me suggestions on how to improve the contrast in my color
+                                    scheme? I violate the minimum contrast ratio of 4.5:1 between text and background
+                                    color."
+                                </td>
+                                <td>
+                                    Color Scheme in Viscreal Design and in Base.css
+                                </td>
+                                <td>6 Oct 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>Give feedback on my Plugin request based on the checklist given in the IA slides
+                                    given.
+                                </td>
+                                <td>
+                                    "Below are the checklists for a good ethical assessment of the plugin request, can
+                                    you give me feedbacks on my ethical response document based on the checklist?"
+                                </td>
+                                <td>Ethical Response</td>
+                                <td>6 Oct 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude & ChatGPT</td>
+                                <td>Create a prompt to use in ChatGPT to create imagery in Reflective Design</td>
+                                <td>
+                                    "Here is the {details} of what I want in the imagery for the reflective design, can
+                                    you create a prompt for me to generate the imagery using ChatGPT?"
+                                </td>
+                                <td>Imagery generation in Reflective Design
+                                </td>
+                                <td>5 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td>Quillbot</td>
+                                <td>Improvement on general grammar and english sentences in
+                                    site map, style guides, and ethical response
+                                </td>
+                                <td>
+                                    -
+                                </td>
+                                <td>Site map, style guides, and ethical response</td>
+                                <td>Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td>Claude</td>
+                                <td>Improvement on general grammar and english sentences in
+                                    site map, style guides, and ethical response</td>
+                                <td>
+                                    "Can you improve this sentence to be more proper english?"
+                                </td>
+                                <td>Site map, style guides, and ethical response</td>
+                                <td>Oct 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>Color Scheme and Typography layout styling improvement</td>
+                                <td>
+                                    "Here is my existing color scheme and typography layout, can you give me some
+                                    suggestions on how to improve it?"
+                                </td>
+                                <td>Navbar</td>
+                                <td>Sept 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>Improving Community Form</td>
+                                <td>
+                                    "Here is my existing community form code, can you give me some suggestions on how
+                                    to improve it based on WCAG guidelines?"
+                                </td>
+                                <td>Navbar</td>
+                                <td>5 Oct 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>Understanding Accordion code</td>
+                                <td>
+                                    "Can you explain to me how this accordions code work?"
+                                </td>
+                                <td>Navbar</td>
+                                <td>19 September 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td>Claude</td>
+                                <td>Improvement on Navbar </td>
+                                <td>
+                                    "Can you give me ideas on how to improve my existing navbar? Here is my existing
+                                    navbar code, can you give me some references on how to improve it?"
+                                </td>
+                                <td>Navbar</td>
+                                <td>4 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td>Claude</td>
+                                <td>Improving typography (font sizings) based on the
+                                    golden ratio
+                                </td>
+                                <td>
+                                    "Can you give me suggestions on how to improve my typography (font sizings) based
+                                    on the golden ratio?"
+                                </td>
+                                <td>Viscreal Design Page</td>
+                                <td>5 Oct 2025</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+            </section>
+
+            <section class="m-t-4">
+                <div class="base-card">
+                    <h3 class="m-b-4">2. Context and Purpose</h3>
+                    <p>
+                        Because I have limited design and CSS skills, I mainly used Claude to generate some feedbacks on
+                        my
+                        existing
+                        design, so I could improve my styling.
+                        Additionally, I use some Machine Translation tools such as Quillbot to improve my grammar and
+                        overall english sentences.
+
+                        The purpose of this AI/MT usage is to give me feedback and suggestions towards my existing work,
+                        and therefore I still hold control over my own work.
+
+                    </p>
+                </div>
+            </section>
+
+            <section class="m-t-4">
+                <div class="base-card">
+                    <h3 class="m-b-4">3. Critical Decision-Making and Ownership</h3>
+                    <p>
+                        When improving my navbar, I make sure to try as best as possible first to create my own dekstop
+                        and
+                        mobile navbar.
+                        After that, I also try to look for inspirations on the internet first, and also learn the
+                        lecture
+                        slides
+                        regarding Visceral, Behavorial, and Reflective design. After having some understanding, then I
+                        went
+                        to prompt the AI to help me find suggestions on how to improve my existing navbar. Even most of
+                        the
+                        navbar styling given was very pretty,
+                        most of the were very had to implement, and I could not understand the code. Therefore, rather
+                        than
+                        copy paste the code, I try to learn the code given by the AI and implement the mobile navbar
+                        myself.
+
+                        <br>
+                        <br>
+
+                        Similiar with the navbar, my card component (base-card) is also went through similiar
+                        proccess.
+                        First, I follow the design given from the applied class slides, and then improve it on my own,
+                        and
+                        then
+                        ask AI to give feedbacks. This way, the assessment card is still mostly handwritten by me.
+                    </p>
+                </div>
+            </section>
+
+            <section class="m-t-4">
+                <div class="base-card">
+                    <h3 class="m-b-4">4. Accuracy, Bias, and Ethical Awareness</h3>
+                    <p>
+                        I carefully reviewed all the genreated code by AI. Other than that, since my prompts are mostly
+                        feedback related, and I also already have the original design, I did not copy pasted entire code
+                        generated by AI, I only use several line of codes given whenever neccesesarry. I also make sure
+                        all of the components still follows the color scheme and overall existing design layout that
+                        were
+                        established before, and therefore the AI did not alter any ethical effect regarding the designs.
+                    </p>
+                </div>
+            </section>
+
+            <section class="m-t-4">
+                <div class="base-card">
+                    <h3 class="m-b-4">5. Privacy and Sensitive Content</h3>
+                    <p>
+                        I did not input any personal data for any prompts I used in this assignment.
+                    </p>
+                </div>
+            </section>
+
+            <section class="m-t-4">
+                <div class="base-card">
+                    <h3 class="m-b-4">6. Reflection on Learning</h3>
+                    <p>
+                        Exploring the design, HTML, js, and css code given by the AI when asking for suggestions
+                        is both scary and exciting. It's scary because it often shows me how little I know about
+                        these things, but also exciting because that means theres still lot more to learn.
+
+                        The usage of AI in this assessment also taught me a little about CSS in general, like
+                        CSS debugging and syntaxes.
+                    </p>
+                </div>
+            </section>
+
+            <section class="m-t-4 p-b-12">
+                <div class="base-card">
+                    <h3 class="m-b-4">7. Attribution and Final Statement</h3>
+                    <p>
+                        I used these AI/MT tools to support and supplement my learning and work in this work phase 2.
+                        All generated code, suggestions, and feedbacks were critically reviewed and adapted based on
+                        my own needs and also the ethical considerations. I ensure the final work given reflects my
+                        understandinga
+                        and capabilities.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
 
 </body>
 
