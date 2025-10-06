@@ -32,7 +32,7 @@ nav ul {
     padding: 0.75rem 0.5rem;
     font-size: 1.8rem;
     text-decoration: none;
-    color: var(--background-color);
+    color: var(--text-on-dark);
     transition: all 0.3s ease;
     position: relative;
 }
@@ -79,15 +79,15 @@ nav ul {
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--background-color);
+    color: var(--text-on-dark);
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
 }
 
 #nav-dekstop ul li a:hover,
 #nav-dekstop ul li a:focus {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-on-dark);
 }
 
 #nav-dekstop ul li a[aria-current="page"] {
