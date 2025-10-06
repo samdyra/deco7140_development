@@ -34,7 +34,6 @@
 }
 
 .breadcrumbs-link a {
-    color: var(--color-primary);
     text-decoration: underline;
 }
 
@@ -47,3 +46,36 @@
         display: none
     }
 } */
+
+.base-card {
+    overflow-x: auto;
+}
+
+.reflective-table {
+    width: 100%;
+    min-width: 600px;
+    display: block;
+}
+
+.reflective-table th,
+.reflective-table td {
+    border: 1px solid black;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.reflective-table th {
+    background-color: var(--accent-bg);
+}
+
+@media (max-width: 600px) {
+    .base-card {
+        padding: 1rem;
+        overflow-x: auto;
+    }
+
+    .reflective-table th,
+    .reflective-table td {
+        padding: 0.25rem;
+    }
+}
