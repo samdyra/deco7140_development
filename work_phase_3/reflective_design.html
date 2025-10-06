@@ -355,6 +355,151 @@
                 </div>
             </section>
 
+            <section class="m-t-12">
+                <h3 class="m-t-8 m-b-2">
+                    Accessibility Audit
+                </h3>
+                <p class="m-b-4">
+                    This Accordion component below will show several accessibility violations that I found in this
+                    website, how it will effect users, and how I plan to fix them.
+                </p>
+            </section>
+
+
+            <section class="accordion">
+                <div class="accordion-item open">
+                    <button class="accordion-header ">▷ Accessibility Audit Result</button>
+                    <div class="accordion-content ">
+                        Below are 3 different accessibility violations that I found in this website using
+                        IBM Equal Access.
+
+                        <div class="accordion-item m-t-4">
+                            <button class="accordion-header">▷ Contrast Minimum</button>
+                            <div class="accordion-content">
+                                Issue Identified: "Text contrast of 3.40 with its background is less than the WCAG AA
+                                minimum requirements for text of size 17.6px and weight of 500"
+
+                                <br>
+                                <br>
+
+
+                                WCAG Criteria: 1.4.3 Contrast (Minimum) (Level AA)
+
+
+                                <br>
+                                <br>
+
+
+                                Element Impacted: Buttons and Navbar.
+
+                                <br>
+                                <br>
+
+
+                                Impact to Users: As mentioeed by Lily in the user needs analysis, users with visual
+                                impairment may have difficulty reading text with low contrast, which can make it
+                                difficult for them to navigate and use the website.
+
+                                <br>
+                                <br>
+
+                                How I Plan to Fix It: I will increase the contrast ratio by darkening the text color and
+                                lightening the background color used in the color scheme. I also provide an alternative
+                                text color for dark background, which is white (#FFFFFF), to be used in navbar. Due to
+                                the high number of violations related to contrast, I already done fix this issue, and
+                                the result is also have been implemented in this website, more details about the color
+                                scheme is provided in the visceral page.
+
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item m-t-4">
+                            <button class="accordion-header">▷ Form Related Violation</button>
+                            <div class="accordion-content">
+                                Issue Identified: "Violation Label text is located after its associated text input or
+                                "select"" element Learn more"
+
+                                "Violation Form control has more than one label Learn more"
+
+                                "Violation The ARIA attributes "aria-label" are not valid for the element "span" with
+                                implicit ARIA role "generic""
+                                <br>
+                                <br>
+
+                                WCAG Criteria: 3.3.2 Labels or Instructions (Level A)
+
+                                <br>
+                                <br>
+
+
+                                Element Impacted: Form element in the behavorial page.
+
+                                <br>
+                                <br>
+
+
+                                Impact to Users: Users with screen readers may have difficulty understanding the purpose
+                                of form inputs in the form.
+
+                                <br>
+                                <br>
+
+                                How I Plan to Fix It: I will ensure that all form inputs have a single label that
+                                is associated with the input. I will also remove any invalid ARIA attributes from
+                                non-interactive elements.
+                            </div>
+                        </div>
+
+                        <div class="accordion-item m-t-4">
+                            <button class="accordion-header">▷ Alternative Texts for non-text content violation</button>
+                            <div class="accordion-content">
+                                Issue Identified: "Text alternative is more than 150 characters"
+
+                                "Violation The image has neither an accessible name nor is marked as decorative or
+                                redundant"
+
+
+                                <br>
+                                <br>
+
+
+                                WCAG Criteria: 1.1.1 Non-text Content (Level A)
+
+
+                                <br>
+                                <br>
+
+
+                                Element Impacted: Images in the this reflective page, especially in the imagery examples
+                                section.
+
+                                <br>
+                                <br>
+
+
+                                Impact to Users: Users with screen readers may have difficulty understanding the content
+                                and purpose of the image used.
+
+                                <br>
+                                <br>
+
+                                How I Plan to Fix It: I will ensure that all non-text content to have appropriate alt
+                                text that
+                                accurately describes the content and the purpose. Special case for this "Text
+                                alternative is more than 150 characters", in this case, it is actually intentional
+                                because we use the alt text as annotation. As for the lack of alt issue, I already fixed
+                                this issue by adding alt text to all images that previously do not have alt text.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
 
 
             <div class="p-y-16"></div>
