@@ -1,0 +1,56 @@
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.button-secondary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+.button:active {
+    transform: translateY(0);
+    /* Press down effect */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    /* Smaller shadow */
+}
+
+.button-primary:active {
+    background-color: #B8551A;
+    /* Darker version of primary color */
+}
+
+.button-secondary:active {
+    background-color: #8B1F1F;
+    /* Darker version of secondary color */
+}
+
+.button:disabled {
+    background-color: #C9C5C0;
+    color: #807C78;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}

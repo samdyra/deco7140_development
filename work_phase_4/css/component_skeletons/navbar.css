@@ -1,0 +1,116 @@
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    z-index: 10;
+    border-top: 3px solid var(--primary-color);
+}
+
+#nav-mobile ul {
+    padding: 0.5rem 0;
+}
+
+#nav-mobile ul li {
+    flex: 1;
+}
+
+#nav-mobile ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--text-on-dark);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+#nav-mobile ul li a[aria-current="page"] {
+    background-color: var(--primary-color);
+}
+
+#nav-mobile ul li a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    height: 3px;
+    background-color: var(--background-color);
+    border-radius: 2px 2px 0 0;
+}
+
+#nav-dekstop {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    display: none;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+#nav-dekstop ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#nav-dekstop ul li {
+    position: relative;
+}
+
+#nav-dekstop ul li a {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-on-dark);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+#nav-dekstop ul li a:hover,
+#nav-dekstop ul li a:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-on-dark);
+}
+
+#nav-dekstop ul li a[aria-current="page"] {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#nav-dekstop ul li a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--background-color);
+}
+
+@media (min-width: 768px) {
+    #nav-mobile {
+        display: none;
+    }
+
+    #nav-dekstop {
+        display: block;
+    }
+}
