@@ -24,6 +24,20 @@
     position: relative;
 }
 
+.hero-content::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    opacity: 0.15;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
 .hero-content::before {
     content: '';
     position: absolute;
