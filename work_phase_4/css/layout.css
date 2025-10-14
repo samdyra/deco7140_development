@@ -10,22 +10,22 @@
     padding-bottom: calc(1.5rem + 70px);
 }
 
-.container--no-bottom {
+.container-no-bottom {
     padding-bottom: 1.5rem;
 }
 
-.container--full-height {
+.container-full-height {
     min-height: 100vh;
     padding-bottom: calc(1.5rem + 70px);
     display: flex;
     flex-direction: column;
 }
 
-.container--wide {
+.container-wide {
     max-width: 1400px;
 }
 
-.container--narrow {
+.container-narrow {
     max-width: 800px;
 }
 
@@ -39,11 +39,11 @@
         /* Remove mobile nav space */
     }
 
-    .container--no-bottom {
+    .container-no-bottom {
         padding-bottom: 2rem;
     }
 
-    .container--full-height {
+    .container-full-height {
         padding-top: calc(2rem + 65px);
         padding-bottom: 2rem;
     }
@@ -55,7 +55,7 @@
         padding-top: calc(2.5rem + 65px);
     }
 
-    .container--full-height {
+    .container-full-height {
         padding-top: calc(2.5rem + 65px);
         padding-bottom: 2.5rem;
     }
@@ -67,18 +67,18 @@
         padding-top: calc(3rem + 65px);
     }
 
-    .container--full-height {
+    .container-full-height {
         padding-top: calc(3rem + 65px);
         padding-bottom: 3rem;
     }
 }
 
-.container--flush-top {
+.container-flush-top {
     padding-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    .container--flush-top {
+    .container-flush-top {
         padding-top: 65px;
     }
 }
