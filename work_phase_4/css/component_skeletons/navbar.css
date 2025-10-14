@@ -11,10 +11,9 @@ nav ul {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
     z-index: 10;
-    border-top: 3px solid var(--secondary-color);
-    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+    border-top: 3px solid var(--primary-color);
 }
 
 #nav-mobile ul {
@@ -33,13 +32,14 @@ nav ul {
     padding: 0.75rem 0.5rem;
     font-size: 1.8rem;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-on-dark);
     transition: all 0.3s ease;
     position: relative;
 }
 
+
 #nav-mobile ul li a[aria-current="page"] {
-    background-color: var(--accent-bg);
+    background-color: var(--primary-color);
 }
 
 #nav-mobile ul li a[aria-current="page"]::after {
@@ -48,7 +48,7 @@ nav ul {
     bottom: 0;
     width: 40%;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     border-radius: 2px 2px 0 0;
 }
 
@@ -56,11 +56,11 @@ nav ul {
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: var(--background-color);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
     z-index: 10;
     display: none;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 #nav-dekstop ul {
@@ -79,20 +79,20 @@ nav ul {
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-on-dark);
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
 }
 
 #nav-dekstop ul li a:hover,
 #nav-dekstop ul li a:focus {
-    background-color: var(--accent-bg);
-    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-on-dark);
 }
 
 #nav-dekstop ul li a[aria-current="page"] {
-    background-color: var(--accent-bg);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 #nav-dekstop ul li a[aria-current="page"]::after {
@@ -102,7 +102,7 @@ nav ul {
     left: 0;
     right: 0;
     height: 4px;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
 }
 
 @media (min-width: 768px) {
