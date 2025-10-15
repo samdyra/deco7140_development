@@ -3,85 +3,24 @@
    ============================================ */
 
 .container {
-    width: 100%;
-    max-width: 1200px;
+    height: 100vh;
+    width: 85vw;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
-    padding-bottom: calc(1.5rem + 70px);
-}
-
-.container-no-bottom {
-    padding-bottom: 1.5rem;
-}
-
-.container-full-height {
-    min-height: 100vh;
-    padding-bottom: calc(1.5rem + 70px);
-    display: flex;
-    flex-direction: column;
-}
-
-.container-wide {
-    max-width: 1400px;
-}
-
-.container-narrow {
-    max-width: 800px;
 }
 
 @media (min-width: 768px) {
     .container {
-        padding: 2rem 2rem;
-        /* Account for desktop nav at top */
-        padding-top: calc(2rem + 65px);
-        /* 65px = approx desktop nav height */
-        padding-bottom: 2rem;
-        /* Remove mobile nav space */
-    }
-
-    .container-no-bottom {
-        padding-bottom: 2rem;
-    }
-
-    .container-full-height {
-        padding-top: calc(2rem + 65px);
-        padding-bottom: 2rem;
+        width: 85vw;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .container {
-        padding: 2.5rem 3rem;
-        padding-top: calc(2.5rem + 65px);
-    }
-
-    .container-full-height {
-        padding-top: calc(2.5rem + 65px);
-        padding-bottom: 2.5rem;
+        width: 75vw;
     }
 }
 
-@media (min-width: 1440px) {
-    .container {
-        padding: 3rem 4rem;
-        padding-top: calc(3rem + 65px);
-    }
 
-    .container-full-height {
-        padding-top: calc(3rem + 65px);
-        padding-bottom: 3rem;
-    }
-}
-
-.container-flush-top {
-    padding-top: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .container-flush-top {
-        padding-top: 65px;
-    }
-}
 
 /* CSS Custom Properties for Spacing Values */
 :root {
