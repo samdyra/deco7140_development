@@ -89,7 +89,6 @@
     line-height: 1.7;
     font-weight: 400;
     margin-bottom: 2rem;
-    border-left: 3px solid var(--accent-bg);
 }
 
 .hero-actions {
@@ -133,6 +132,7 @@
         max-height: none;
         height: 100%;
         object-position: 70% center;
+        border-radius: 0 0 0 50px;
     }
 
     .hero-eyebrow {
