@@ -75,6 +75,7 @@
 @media (max-width: 768px) {
     .feed-layout-container {
         padding-inline: 8px;
+        margin-top: var(--spacing-6);
     }
 
     .sidebar {
@@ -89,6 +90,7 @@
 @media (max-width: 480px) {
     .feed-layout-container {
         padding-inline: 4px;
+        margin-top: var(--spacing-6);
     }
 
     .feed-crumbs {
