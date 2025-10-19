@@ -21,7 +21,7 @@
 }
 
 .post:hover {
-    background-color: #FFFBF7;
+    background-color: var(--accent-bg);
 }
 
 .post-avatar {
