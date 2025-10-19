@@ -9,6 +9,11 @@
     text-decoration: none;
 }
 
+.small-button {
+    padding: 6px 12px;
+
+}
+
 .button-primary {
     background-color: var(--primary-color);
     color: white;
