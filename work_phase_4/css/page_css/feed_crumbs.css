@@ -18,77 +18,6 @@
     flex-direction: column;
 }
 
-.friend-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.friend-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.friend-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--accent-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-}
-
-.friend-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.friend-name {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.friend-username {
-    font-size: 0.875rem;
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-/* Profile Card */
-.profile-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-}
-
-.profile-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: var(--accent-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-}
-
-.profile-name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.profile-username {
-    color: var(--primary-color);
-    font-size: 0.875rem;
-    font-weight: 600;
-
-}
 
 @media (max-width: 1200px) {
     .feeds-card-container {
@@ -106,4 +35,84 @@
     .feed-crumbs {
         width: 100%;
     }
+}
+
+
+.ranking-section {
+    padding: 12px;
+    background-color: white;
+}
+
+.ranking-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.ranking-icon {
+    font-size: 1.25rem;
+}
+
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.rank {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.rank.rank-1 {
+    background-color: #FFD700;
+    color: #1A1410;
+}
+
+.rank.rank-2 {
+    background-color: #C0C0C0;
+    color: #1A1410;
+}
+
+.rank.rank-3 {
+    background-color: #CD7F32;
+    color: #FFFFFF;
+}
+
+.rank.rank-other {
+    background-color: var(--accent-bg);
+    color: var(--primary-color);
+}
+
+.interactions {
+    gap: 4px;
+    font-size: 0.813rem;
+    font-weight: 600;
+}
+
+.icon {
+    font-size: 0.875rem;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.ranking-item:hover {
+    background-color: var(--background-color);
 }
