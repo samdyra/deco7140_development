@@ -1,0 +1,21 @@
+.crumbs-controls {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px 8px 0 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .crumbs-controls {
+        top: var(--spacing-6);
+    }
+}
+
+@media (max-width: 480px) {
+    .crumbs-controls {
+        padding: 12px;
+    }
+}

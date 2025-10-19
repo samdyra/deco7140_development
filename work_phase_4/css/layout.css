@@ -19,6 +19,44 @@
     }
 }
 
+/* special container for feed and crumbsmap */
+
+.feed-layout-container {
+    display: flex;
+    gap: 12px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    margin-top: var(--spacing-24);
+}
+
+@media (max-width: 1200px) {
+    .feed-layout-container {
+        padding-inline: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .feed-layout-container {
+        padding-inline: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feed-layout-container {
+        padding-inline: 8px;
+        margin-top: var(--spacing-3);
+        height: calc(100vh - var(--spacing-6) - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .feed-layout-container {
+        padding-inline: 4px;
+        margin-top: var(--spacing-1);
+    }
+}
+
 
 
 /* CSS Custom Properties for Spacing Values */
