@@ -10,12 +10,12 @@
 }
 
 .button-primary {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
 }
 
 .button-secondary {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: white;
 }
 
