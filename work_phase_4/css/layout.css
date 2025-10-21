@@ -21,7 +21,7 @@
 
 /* special container for feed and crumbsmap */
 
-.feed-layout-container {
+.crumbs-layout-container {
     display: flex;
     gap: 12px;
     max-width: 1400px;
@@ -31,19 +31,19 @@
 }
 
 @media (max-width: 1200px) {
-    .feed-layout-container {
+    .crumbs-layout-container {
         padding-inline: 16px;
     }
 }
 
 @media (max-width: 1024px) {
-    .feed-layout-container {
+    .crumbs-layout-container {
         padding-inline: 12px;
     }
 }
 
 @media (max-width: 768px) {
-    .feed-layout-container {
+    .crumbs-layout-container {
         padding-inline: 8px;
         margin-top: var(--spacing-3);
         height: calc(100vh - var(--spacing-6) - 40px);
@@ -51,9 +51,21 @@
 }
 
 @media (max-width: 480px) {
-    .feed-layout-container {
+    .crumbs-layout-container {
         padding-inline: 4px;
         margin-top: var(--spacing-1);
+    }
+}
+
+.crumbs-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .crumbs-container {
+        width: 100%;
     }
 }
 
