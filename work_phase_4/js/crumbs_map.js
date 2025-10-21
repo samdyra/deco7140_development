@@ -33,4 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
     container.scrollTop = (container.scrollHeight - container.clientHeight) / 2;
+
+
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('active');
+    });
 });
