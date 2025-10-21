@@ -94,3 +94,9 @@
     flex-direction: column;
     gap: var(--spacing-2);
 }
+
+.map-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
