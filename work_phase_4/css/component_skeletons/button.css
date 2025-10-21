@@ -24,6 +24,12 @@
     color: white;
 }
 
+.button-tertiary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
 .button:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
@@ -45,6 +51,11 @@
 .button-secondary:active {
     background-color: #8B1F1F;
     /* Darker version of secondary color */
+}
+
+.button-tertiary:active {
+    background-color: #E0E0E0;
+    /* Slightly darker background */
 }
 
 .button:disabled {

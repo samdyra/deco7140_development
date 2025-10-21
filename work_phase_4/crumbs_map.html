@@ -47,7 +47,85 @@
             </div>
         </div>
         <div class="sidebar">
+            <div class="map-controls">
+                <div class="control-section">
+                    <h5 class="control-section-title">Basemap</h5>
+                    <div class="basemap-options">
+                        <div class="basemap-option">
+                            <input type="radio" id="basemap-standard" name="basemap" checked>
+                            <label for="basemap-standard">Standard</label>
+                        </div>
+                        <div class="basemap-option">
+                            <input type="radio" id="basemap-satellite" name="basemap">
+                            <label for="basemap-satellite">Satellite</label>
+                        </div>
+                        <div class="basemap-option">
+                            <input type="radio" id="basemap-terrain" name="basemap">
+                            <label for="basemap-terrain">Terrain</label>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="control-section">
+                    <h5 class="control-section-title">Layers</h5>
+                    <div class="layer-toggles">
+                        <div class="layer-toggle">
+                            <label for="layer-regions">Indigenous Regions</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="layer-regions" checked>
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                        <div class="layer-toggle">
+                            <label for="layer-recipes">Cultural Landmarks</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="layer-recipes">
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                        <div class="layer-toggle">
+                            <label for="layer-events">Administrative Boundary</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="layer-events">
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h5 class="control-section-title">Zoom</h5>
+                    <div class="zoom-controls">
+                        <div class="zoom-buttons">
+                            <button class="button button-tertiary">Zoom Out</button>
+                            <button class="button button-secondary">Zoom In</button>
+                        </div>
+                        <div class="zoom-level">
+                            <label for="zoom-slider">Level:</label>
+                            <input type="range" id="zoom-slider" min="1" max="20" value="10">
+                            <h4 class="zoom-value">10</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h5 class="control-section-title">Quick Views</h5>
+                    <div class="view-presets">
+                        <button class="button button-tertiary">Nearest Cultural Cuisine</button>
+                        <button class="button button-tertiary">Nearest OZVents</button>
+                        <button class="button button-tertiary">Nearest Popular Runes</button>
+
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h5 class="control-section-title">Actions</h5>
+                    <div class="map-actions">
+                        <button class="button button-primary">Export Map</button>
+                        <button class="button button-tertiary">Reset View</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script type="module" src='js/crumbs_map.js'></script>
