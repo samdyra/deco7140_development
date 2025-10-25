@@ -15,6 +15,17 @@
     outline-color: var(--secondary-color);
 }
 
+.buttons-group {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    width: 100%;
+}
+
+.buttons-group .button {
+    flex: 1;
+}
+
 @media (max-width: 768px) {
     .search-bar {
         flex-direction: column;
