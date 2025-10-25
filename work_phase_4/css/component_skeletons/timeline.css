@@ -6,6 +6,119 @@
     border-radius: 0 0 8px 8px;
 }
 
+
+.timeline-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.timeline-loading {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.timeline-error {
+    background-color: #fff5f5;
+    border: 1px solid var(--accent-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.error-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.error-title {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.error-message {
+    color: var(--text-color);
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+    max-width: 400px;
+}
+
+.retry-button {
+    padding: 10px 24px;
+    background-color: var(--secondary-color);
+    color: var(--text-on-dark);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.retry-button:hover {
+    background-color: var(--primary-color);
+}
+
+.retry-button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.timeline-empty {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-title {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.empty-message {
+    color: var(--text-color);
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
 .post {
     background-color: white;
     border: 1px solid var(--border-color);
@@ -69,5 +182,26 @@
     .post-avatar {
         width: 40px;
         height: 40px;
+    }
+
+    .timeline-state {
+        padding: 32px 16px;
+        min-height: 250px;
+    }
+
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border-width: 3px;
+    }
+
+    .error-icon,
+    .empty-icon {
+        font-size: 40px;
+    }
+
+    .error-title,
+    .empty-title {
+        font-size: 1.125rem;
     }
 }

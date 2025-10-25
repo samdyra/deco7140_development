@@ -7,6 +7,7 @@ import { postFormData } from './modules/postFormData.js';
 import { getTimeAgo } from './modules/getTimeAgo.js';
 import { initModal } from './modules/modal.js';
 import { initFormValidation } from './modules/form.js';
+import { initTimeline } from './modules/get-timeline.js';
 
 /**
 * CONSTANTS
@@ -24,67 +25,12 @@ const API_HEADERS = {
 * */
 let crumbModal;
 let crumbForm;
+let loadTimeline;
 
 /**
 * FUNCTIONS
 * Group code into functions to make it reusable
 * */
-function loadTimeline() {
-    const container = document.querySelector('.timeline');
-
-    fetchGetData(API_URL, API_HEADERS).then(data => {
-        if (!data) {
-            container.innerHTML = '<p class="text-danger">Unable to load timeline posts.</p>';
-            return;
-        }
-
-        container.innerHTML = '';
-
-        data.forEach(member => {
-            const post = document.createElement('article');
-            post.className = 'post';
-
-            const avatar = document.createElement('img');
-            avatar.className = 'post-avatar';
-            avatar.src = member.photo;
-            avatar.alt = `${member.name}'s avatar`;
-
-            const content = document.createElement('div');
-            content.className = 'post-content';
-
-            const header = document.createElement('div');
-            header.className = 'post-header';
-
-            const name = document.createElement('p');
-            name.className = 'post-name';
-            name.textContent = member.name;
-
-            const username = document.createElement('p');
-            username.className = 'post-username';
-            username.textContent = `@${member.email.split('@')[0]}`;
-
-            const time = document.createElement('p');
-            time.className = 'post-time';
-            time.textContent = `· ${getTimeAgo(member.created_at)}`;
-
-            header.appendChild(name);
-            header.appendChild(username);
-            header.appendChild(time);
-
-            const message = document.createElement('p');
-            message.textContent = member.message;
-
-            content.appendChild(header);
-            content.appendChild(message);
-
-            post.appendChild(avatar);
-            post.appendChild(content);
-
-            container.appendChild(post);
-        });
-    });
-}
-
 async function handleFormSubmit(e) {
     e.preventDefault();
 
@@ -130,6 +76,7 @@ async function handleFormSubmit(e) {
 * The code that runs when a user interacts with the page
 * */
 document.addEventListener('DOMContentLoaded', () => {
+    loadTimeline = initTimeline(API_URL, API_HEADERS, fetchGetData, getTimeAgo);
     loadTimeline();
 
     crumbModal = initModal('create-crumbs-modal');
