@@ -3,6 +3,8 @@
 * Keep track of external modules being used
 * */
 import { fetchGetData } from './modules/getData.js';
+import { postFormData } from './modules/postFormData.js';
+import { getTimeAgo } from './modules/getTimeAgo.js';
 
 /**
 * CONSTANTS
@@ -24,7 +26,7 @@ import { fetchGetData } from './modules/getData.js';
 * The code that runs when a user interacts with the page
 * */
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('timelineContainer');
+    const container = document.querySelector('.timeline');
 
     fetchGetData('https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/', {
         'student_number': 's4980498',
@@ -36,11 +38,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         data.forEach(member => {
-            const card = document.createElement('div');
-            card.className = '';
-            card.innerHTML = ``;
-            container.appendChild(card);
+            const post = document.createElement('article');
+            post.className = 'post';
+
+            const avatar = document.createElement('img');
+            avatar.className = 'post-avatar';
+            avatar.src = member.photo;
+            avatar.alt = `${member.name}'s avatar`;
+
+            const content = document.createElement('div');
+            content.className = 'post-content';
+
+            const header = document.createElement('div');
+            header.className = 'post-header';
+
+            const name = document.createElement('p');
+            name.className = 'post-name';
+            name.textContent = member.name;
+
+            const username = document.createElement('p');
+            username.className = 'post-username';
+            username.textContent = `@${member.email.split('@')[0]}`;
+
+            const time = document.createElement('p');
+            time.className = 'post-time';
+            time.textContent = `· ${getTimeAgo(member.created_at)}`;
+
+            header.appendChild(name);
+            header.appendChild(username);
+            header.appendChild(time);
+
+            const message = document.createElement('p');
+            message.textContent = member.message;
+
+            content.appendChild(header);
+            content.appendChild(message);
+
+            post.appendChild(avatar);
+            post.appendChild(content);
+
+            container.appendChild(post);
         });
+
     });
 });
 
