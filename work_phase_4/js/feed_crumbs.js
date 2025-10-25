@@ -5,37 +5,40 @@
 import { fetchGetData } from './modules/getData.js';
 import { postFormData } from './modules/postFormData.js';
 import { getTimeAgo } from './modules/getTimeAgo.js';
+import { initModal } from './modules/modal.js';
+import { initFormValidation } from './modules/form.js';
 
 /**
 * CONSTANTS
 * Define values that don't change e.g. page titles, URLs, etc.
 * */
+const API_URL = 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/';
+const API_HEADERS = {
+    'student_number': 's4980498',
+    'uqcloud_zone_id': 'c30ed0d4',
+};
 
 /**
 * VARIABLES
 * Define values that will change e.g. user inputs, counters, etc.
 * */
+let crumbModal;
+let crumbForm;
 
 /**
 * FUNCTIONS
 * Group code into functions to make it reusable
 * */
-
-/**
-* EVENT LISTENERS
-* The code that runs when a user interacts with the page
-* */
-document.addEventListener('DOMContentLoaded', () => {
+function loadTimeline() {
     const container = document.querySelector('.timeline');
 
-    fetchGetData('https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/', {
-        'student_number': 's4980498',
-        'uqcloud_zone_id': 'c30ed0d4',
-    }).then(data => {
+    fetchGetData(API_URL, API_HEADERS).then(data => {
         if (!data) {
-            container.innerHTML = '<p class="text-danger">Unable to timeline posts.</p>';
+            container.innerHTML = '<p class="text-danger">Unable to load timeline posts.</p>';
             return;
         }
+
+        container.innerHTML = '';
 
         data.forEach(member => {
             const post = document.createElement('article');
@@ -79,29 +82,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
             container.appendChild(post);
         });
-
     });
-});
+}
 
+async function handleFormSubmit(e) {
+    e.preventDefault();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('feed-form');
-    const feedback = document.getElementById('form-feedback');
+    if (!crumbForm.validate()) {
+        crumbForm.setFeedback('Please fix the errors above.', 'error');
+        return;
+    }
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    crumbForm.setFeedback('Submitting your crumb...', 'loading');
+    crumbForm.setSubmitButtonState(true, 'Posting...', 'Post Crumb');
 
-        feedback.textContent = 'Submitting...';
-        const { success, data } = await postFormData(form, 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/', {
-            'student_number': 's4980498',
-            'uqcloud_zone_id': 'c30ed0d4',
-        });
+    try {
+        const form = document.getElementById('feed-form');
+        const { success, data } = await postFormData(form, API_URL, API_HEADERS);
 
         if (success) {
-            feedback.textContent = data.message;
-            form.reset();
+            crumbForm.setFeedback('Crumb posted successfully!', 'success');
+
+            setTimeout(() => {
+                crumbForm.reset();
+                crumbForm.clearFeedback();
+                crumbModal.close();
+                loadTimeline();
+            }, 1500);
         } else {
-            feedback.textContent = data.message || 'Something went wrong.';
+            crumbForm.setFeedback(
+                data.message || 'Failed to post crumb. Please try again.',
+                'error'
+            );
         }
-    });
+    } catch (error) {
+        crumbForm.setFeedback(
+            'Network error. Please check your connection and try again.',
+            'error'
+        );
+    } finally {
+        crumbForm.setSubmitButtonState(false, 'Posting...', 'Post Crumb');
+    }
+}
+
+/**
+* EVENT LISTENERS
+* The code that runs when a user interacts with the page
+* */
+document.addEventListener('DOMContentLoaded', () => {
+    loadTimeline();
+
+    crumbModal = initModal('create-crumbs-modal');
+    crumbForm = initFormValidation('feed-form');
+
+    const openModalBtn = document.querySelector('.button-secondary');
+    if (openModalBtn) {
+        openModalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            crumbModal.open();
+        });
+    }
+
+    const cancelBtn = document.getElementById('cancel-btn');
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            crumbForm.reset();
+            crumbForm.clearFeedback();
+            crumbModal.close();
+        });
+    }
+
+    const form = document.getElementById('feed-form');
+    if (form) {
+        form.addEventListener('submit', handleFormSubmit);
+    }
 });
