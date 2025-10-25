@@ -1,0 +1,110 @@
+/* Footer */
+
+.footer {
+    background-color: var(--accent-bg);
+    padding: var(--spacing-12) 0 var(--spacing-8);
+    margin-top: var(--spacing-20);
+}
+
+.footer .container {
+    padding-bottom: calc(1.5rem + 70px);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.footer-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-tagline {
+    color: var(--text-color);
+    font-size: 0.875rem;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.footer-heading {
+    margin-bottom: var(--spacing-4);
+    color: var(--primary-color);
+}
+
+.footer-links a {
+    color: var(--text-color);
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-links a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.footer-bottom {
+    margin-top: var(--spacing-8);
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--primary-color);
+}
+
+.footer-copyright {
+    color: var(--text-color);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: var(--spacing-16) 0 var(--spacing-10);
+    }
+
+    .footer .container {
+        padding-bottom: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--spacing-12);
+    }
+
+    .footer-brand {
+        flex: 1;
+    }
+
+    .footer-nav {
+        flex: 2;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: var(--spacing-12);
+    }
+
+    .footer-bottom {
+        margin-top: var(--spacing-10);
+    }
+}
