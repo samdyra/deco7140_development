@@ -189,6 +189,86 @@
             </section>
         </div>
 
+        <section class="newsletter-section" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-header">
+                        <h2 id="newsletter-title" class="newsletter-title">Stay Connected</h2>
+                        <p class="newsletter-description">Join our community newsletter to receive updates on new
+                            recipes, upcoming events, and cultural stories from across Australia.</p>
+                    </div>
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subscriber-name" class="form-label">
+                                    Full Name <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="subscriber-name" name="name" class="form-input" required
+                                    aria-required="true" aria-describedby="subscriber-name-error" autocomplete="name">
+                                <p id="subscriber-name-error" class="error-message" role="alert" aria-live="polite"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-name" class="form-label">
+                                    Preferred Name
+                                </label>
+                                <input type="text" id="preferred-name" name="preferredName" class="form-input"
+                                    aria-describedby="preferred-help" autocomplete="nickname">
+                                <p id="preferred-help" class="form-help">Optional: How you'd like to be addressed</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subscriber-email" class="form-label">
+                                Email Address <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input type="email" id="subscriber-email" name="email" class="form-input" required
+                                aria-required="true" aria-describedby="subscriber-email-error" autocomplete="email">
+                            <p id="subscriber-email-error" class="error-message" role="alert" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="community-interest" class="form-label">
+                                Community Interest <span class="required" aria-label="required">*</span>
+                            </label>
+                            <select id="community-interest" name="communityInterest" class="form-input" required
+                                aria-required="true" aria-describedby="community-interest-error"
+                                aria-controls="other-community-group">
+                                <option value="">Select a community</option>
+                                <option value="asian">Asian Cuisine Lovers</option>
+                                <option value="latin">Latin American Flavors</option>
+                                <option value="mediterranean">Mediterranean Kitchen</option>
+                                <option value="indigenous">Indigenous Australian Food</option>
+                                <option value="african">African Cuisine Hub</option>
+                                <option value="european">European Heritage Cooking</option>
+                                <option value="all">All Communities</option>
+                                <option value="other">Other (Please specify)</option>
+                            </select>
+                            <p id="community-interest-error" class="error-message" role="alert" aria-live="polite"></p>
+                        </div>
+
+                        <div id="other-community-group" class="form-group" hidden>
+                            <label for="other-community" class="form-label">
+                                Please Specify <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input type="text" id="other-community" name="otherCommunity" class="form-input"
+                                aria-required="false" aria-describedby="other-community-error"
+                                placeholder="Enter your community interest">
+                            <p id="other-community-error" class="error-message" role="alert" aria-live="polite"></p>
+                        </div>
+
+                        <div id="newsletter-feedback" class="form-feedback" role="status" aria-live="polite"
+                            aria-atomic="true"></div>
+
+                        <button type="submit" class="button button-primary newsletter-submit">Subscribe to
+                            Newsletter</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider" aria-hidden="true"></div>
+
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
@@ -229,6 +309,7 @@
             </div>
         </footer>
     </main>
+    <script type="module" src="js/modules/newslettter-plugin.js"></script>
 </body>
 
 </html>

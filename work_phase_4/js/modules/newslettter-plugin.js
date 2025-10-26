@@ -2,7 +2,7 @@
  * IMPORTS
  * Keep track of external modules being used
  */
-import { initFormValidation } from './modules/form.js';
+import { initFormValidation } from './form.js';
 
 /**
  * CONSTANTS
