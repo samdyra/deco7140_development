@@ -178,9 +178,6 @@
 }
 
 @media (min-width: 768px) {
-    .page-header {
-        padding: 7rem 0 3rem;
-    }
 
     .create-section {
         padding-top: 4rem;

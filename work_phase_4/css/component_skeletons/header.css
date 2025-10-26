@@ -25,3 +25,9 @@
     font-size: 1.125rem;
     max-width: 700px;
 }
+
+@media (min-width: 768px) {
+    .page-header {
+        padding: 7rem 0 3rem;
+    }
+}
