@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumbings - FeedCrumbs</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/crumbings.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+</head>
+
+<body>
+    <nav id="nav-mobile" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="home_page.html"><span class="icon">🏚️</span></a></li>
+            <li><a href="feed_crumbs.html"><span class="icon">🗺️</span></a></li>
+            <li><a href="crumbs_map.html"><span>🗺️</span></a></li>
+            <li><a href="community.html"><span>👥</span></a></li>
+            <li><a href="crumbings.html" aria-current="page"><span>👥</span></a></li>
+        </ul>
+    </nav>
+    <nav id="nav-dekstop" aria-label="Desktop Navigation">
+        <ul>
+            <li><a href="home_page.html"><span class="icon">Home</span></a></li>
+            <li><a href="feed_crumbs.html"><span class="icon">FeedCrumbs</span></a></li>
+            <li><a href="crumbs_map.html"><span>CrumbsMap</span></a></li>
+            <li><a href="community.html"><span>OZvent</span></a></li>
+            <li><a href="crumbings.html" aria-current="page"><span>Crumbings</span></a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="page-eyebrow">Cook, Share, Compete</span>
+                <h1 class="page-title">Crumbings</h1>
+                <p class="page-description">Share your traditional recipes and attempt community cuisines. Celebrate
+                    culinary heritage through friendly competition and meaningful connections.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="create-section" aria-labelledby="create-title">
+                <div class="create-card">
+                    <div class="create-content">
+                        <h2 id="create-title">Share Your Heritage Recipe</h2>
+                        <p class="create-description">Create a crumbings recipe from your cultural tradition and invite
+                            others to experience your culinary heritage.</p>
+                    </div>
+                    <button type="button" class="button button-primary" aria-label="Create new crumbings recipe">
+                        Create Crumbings
+                    </button>
+                </div>
+            </section>
+
+            <section class="leaderboards-section" aria-labelledby="leaderboards-title">
+                <header class="section-header">
+                    <h2 id="leaderboards-title">Monthly Leaderboards</h2>
+                    <p class="section-description">Celebrating our most popular recipes and active community chefs.
+                        Rankings reset monthly to welcome new contributors.</p>
+                </header>
+
+                <div class="leaderboards-grid">
+                    <article class="leaderboard-card">
+                        <header class="leaderboard-header">
+                            <div class="leaderboard-icon" aria-hidden="true">🍽️</div>
+                            <h3 class="leaderboard-title">Top Crumbings</h3>
+                            <p>Most attempted recipes this month</p>
+                        </header>
+
+                        <ol>
+                            <li class="ranking-item ranking-item-1">
+                                <span class="ranking-position" aria-label="Position 1">1</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Nonna's Handmade Gnocchi</span>
+                                    <span class="ranking-creator">by Maria Rossi</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">342</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item ranking-item-2">
+                                <span class="ranking-position" aria-label="Position 2">2</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Traditional Vietnamese Pho</span>
+                                    <span class="ranking-creator">by Linh Nguyen</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">298</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item ranking-item-3">
+                                <span class="ranking-position" aria-label="Position 3">3</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Authentic Mexican Mole</span>
+                                    <span class="ranking-creator">by Carmen Lopez</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">276</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 4">4</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Wattleseed Damper</span>
+                                    <span class="ranking-creator">by Aunty Margaret</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">234</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 5">5</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Grandma's Pierogi</span>
+                                    <span class="ranking-creator">by Anna Kowalski</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">218</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 6">6</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Ethiopian Doro Wat</span>
+                                    <span class="ranking-creator">by Desta Alemu</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">197</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 7">7</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Biryani from Hyderabad</span>
+                                    <span class="ranking-creator">by Priya Sharma</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">186</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 8">8</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Japanese Ramen Bowl</span>
+                                    <span class="ranking-creator">by Kenji Tanaka</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">172</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 9">9</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Greek Moussaka</span>
+                                    <span class="ranking-creator">by Yianni Papadopoulos</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">164</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 10">10</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Lebanese Kibbeh</span>
+                                    <span class="ranking-creator">by Layla Hassan</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">158</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </article>
+
+                    <article class="leaderboard-card">
+                        <header class="leaderboard-header">
+                            <div class="leaderboard-icon" aria-hidden="true">👨‍🍳</div>
+                            <h3 class="leaderboard-title">Top Chefs</h3>
+                            <p class="leaderboard-subtitle">Most active recipe creators this month</p>
+                        </header>
+
+                        <ol>
+                            <li class="ranking-item ranking-item-1">
+                                <span class="ranking-position" aria-label="Position 1">1</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Sarah Chen</span>
+                                    <span class="ranking-creator">Asian Cuisine Lovers</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">28</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item ranking-item-2">
+                                <span class="ranking-position" aria-label="Position 2">2</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Marco Silva</span>
+                                    <span class="ranking-creator">Latin American Flavors</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">24</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item ranking-item-3">
+                                <span class="ranking-position" aria-label="Position 3">3</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Amira Khalil</span>
+                                    <span class="ranking-creator">Mediterranean Kitchen</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">22</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 4">4</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">James Thompson</span>
+                                    <span class="ranking-creator">European Heritage Cooking</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">19</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 5">5</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Fatima Osman</span>
+                                    <span class="ranking-creator">African Cuisine Hub</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">17</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 6">6</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">David Kim</span>
+                                    <span class="ranking-creator">Asian Cuisine Lovers</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">16</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 7">7</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Isabella Martinez</span>
+                                    <span class="ranking-creator">Latin American Flavors</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">15</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 8">8</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Uncle Barry</span>
+                                    <span class="ranking-creator">Indigenous Australian Food</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">14</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 9">9</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Raj Patel</span>
+                                    <span class="ranking-creator">Asian Cuisine Lovers</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">13</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+
+                            <li class="ranking-item">
+                                <span class="ranking-position" aria-label="Position 10">10</span>
+                                <div class="ranking-info">
+                                    <span class="ranking-name">Sophie Dubois</span>
+                                    <span class="ranking-creator">European Heritage Cooking</span>
+                                </div>
+                                <div class="ranking-stats">
+                                    <span class="ranking-number">12</span>
+                                    <span class="ranking-label">attempts</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3 class="footer-title">FeedCrumbs</h3>
+                        <p class="footer-tagline">Share Your Culinary Heritage</p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Footer Navigation">
+                        <div class="footer-links">
+                            <h4 class="footer-heading">Explore</h4>
+                            <ul>
+                                <li><a href="home_page.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="feedcrumbs.html">FeedCrumbs</a></li>
+                                <li><a href="crumbings.html">Crumbings</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h4 class="footer-heading">Support</h4>
+                            <ul>
+                                <li><a href="help.html">Help Center</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="guidelines.html">Community Guidelines</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h4 class="footer-heading">Legal</h4>
+                            <ul>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright">&copy; 2025 FeedCrumbs. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
