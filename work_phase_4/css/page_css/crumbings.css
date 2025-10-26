@@ -1,0 +1,212 @@
+.section-header {
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.section-description {
+    color: var(--text-color);
+    max-width: 650px;
+}
+
+.create-section {
+    padding-top: 4rem;
+}
+
+.create-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.create-content h2 {
+    color: var(--text-on-dark);
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.create-description {
+    color: var(--text-on-dark);
+}
+
+.leaderboards-section {
+    padding: 3rem 0;
+}
+
+.leaderboards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.leaderboard-card {
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.leaderboard-header {
+    background-color: var(--accent-bg);
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.leaderboard-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.leaderboard-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ranking-item:last-child {
+    border-bottom: none;
+}
+
+.ranking-item:hover {
+    background-color: var(--accent-bg);
+}
+
+.ranking-position {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--accent-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.ranking-item-1 .ranking-position {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    font-size: 1.125rem;
+}
+
+.ranking-item-2 .ranking-position {
+    background-color: #C0C0C0;
+    border-color: #C0C0C0;
+    font-size: 1.125rem;
+}
+
+.ranking-item-3 .ranking-position {
+    background-color: #CD7F32;
+    color: var(--text-on-dark);
+    border-color: #CD7F32;
+    font-size: 1.125rem;
+}
+
+.ranking-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.ranking-name {
+    font-weight: 600;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ranking-creator {
+    color: var(--text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ranking-stats {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.125rem;
+}
+
+.ranking-number {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1;
+}
+
+.ranking-label {
+    color: var(--text-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+    .create-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .create-btn {
+        align-self: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        padding: 7rem 0 3rem;
+    }
+
+    .create-section {
+        padding-top: 4rem;
+    }
+
+    .leaderboards-section {
+        padding: 4rem 0 5rem;
+    }
+
+    .leaderboards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .ranking-item {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .create-card {
+        padding: 2.5rem 3rem;
+    }
+
+    .ranking-position {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
