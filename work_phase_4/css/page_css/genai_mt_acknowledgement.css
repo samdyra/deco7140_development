@@ -1,0 +1,41 @@
+.title {
+    padding-top: var(--spacing-8);
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+}
+
+.reflective-table {
+    width: 100%;
+    min-width: 600px;
+    display: block;
+}
+
+.reflective-table th,
+.reflective-table td {
+    border: 1px solid black;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.reflective-table th {
+    background-color: var(--accent-bg);
+}
+
+.base-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+
+}
+
+@media (min-width: 768px) {
+    .title {
+        padding-top: var(--spacing-24);
+    }
+
+    .reflective-table th,
+    .reflective-table td {
+        padding: 0.25rem;
+    }
+}
