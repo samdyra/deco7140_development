@@ -9,6 +9,10 @@
     color: var(--text-color);
 }
 
+.crumb-form {
+    padding: 20px;
+}
+
 .required {
     color: var(--accent-color);
     font-weight: 700;
@@ -169,5 +173,9 @@
     .form-actions .button {
         flex: 0 0 auto;
         min-width: 120px;
+    }
+
+    .crumb-form {
+        padding: 24px;
     }
 }

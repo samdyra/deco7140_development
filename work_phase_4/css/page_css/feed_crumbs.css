@@ -104,13 +104,3 @@
 .ranking-item:hover {
     background-color: var(--background-color);
 }
-
-.crumb-form {
-    padding: 20px;
-}
-
-@media (min-width: 768px) {
-    .crumb-form {
-        padding: 24px;
-    }
-}
