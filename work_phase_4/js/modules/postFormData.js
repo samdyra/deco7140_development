@@ -11,7 +11,7 @@ const postFormData = async (formEl, endpointUrl, customHeaders = {}) => {
         const data = await response.json();
 
         return {
-            success: response.ok && data.status === 'success',
+            success: response.ok,
             data,
         };
     } catch (error) {
