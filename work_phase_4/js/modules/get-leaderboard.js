@@ -124,6 +124,83 @@ function filterTestData(data) {
 }
 
 /**
+ * Show recipe detail modal
+ * @param {Object} recipe - The recipe data
+ */
+function showRecipeDetail(recipe) {
+    const { recipeName, creatorName } = parseNameField(recipe.name);
+    const attempts = extractAttempts(recipe.email);
+
+    const existingModal = document.getElementById('recipe-detail-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+
+    const modal = document.createElement('div');
+    modal.id = 'recipe-detail-modal';
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-overlay"></div>
+        <div class="modal-content recipe-detail-content">
+            <div class="modal-header">
+                <h2>Recipe Details</h2>
+                <button class="modal-close" aria-label="Close modal">×</button>
+            </div>
+            
+            <div class="recipe-detail-body">
+                <div class="recipe-detail-image">
+                    <img src="${recipe.photo}" alt="${recipeName}" />
+                </div>
+                
+                <div class="recipe-detail-info">
+                    <h3 class="recipe-detail-title">${recipeName}</h3>
+                    <p class="recipe-detail-creator">by ${creatorName}</p>
+                    
+                    <div class="recipe-detail-stats">
+                        <div class="recipe-stat">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span><strong>${attempts}</strong> attempts</span>
+                        </div>
+                    </div>
+                    
+                    <div class="recipe-detail-description">
+                        <h4>Recipe Story</h4>
+                        <p>${recipe.message || 'No description available.'}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const closeBtn = modal.querySelector('.modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
+
+    const closeModal = () => {
+        modal.remove();
+        document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function escHandler(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', escHandler);
+        }
+    });
+
+    document.body.style.overflow = 'hidden';
+}
+
+/**
  * Create a ranking item element
  * @param {Object} recipe - The recipe data
  * @param {number} position - The position in the ranking (1, 2, 3, etc.)
@@ -132,6 +209,10 @@ function filterTestData(data) {
 function createRankingItem(recipe, position) {
     const li = document.createElement('li');
     li.className = position <= 3 ? `ranking-item ranking-item-${position}` : 'ranking-item';
+    li.style.cursor = 'pointer';
+    li.setAttribute('tabindex', '0');
+    li.setAttribute('role', 'button');
+    li.setAttribute('aria-label', `View details for ${parseNameField(recipe.name).recipeName}`);
 
     const positionSpan = document.createElement('span');
     positionSpan.className = 'ranking-position';
@@ -173,6 +254,17 @@ function createRankingItem(recipe, position) {
     li.appendChild(positionSpan);
     li.appendChild(infoDiv);
     li.appendChild(statsDiv);
+
+    li.addEventListener('click', () => {
+        showRecipeDetail(recipe);
+    });
+
+    li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            showRecipeDetail(recipe);
+        }
+    });
 
     return li;
 }
