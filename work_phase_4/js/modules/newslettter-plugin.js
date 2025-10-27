@@ -3,6 +3,7 @@
  * Keep track of external modules being used
  */
 import { initFormValidation } from './form.js';
+import { postFormData } from './postFormData.js';
 
 /**
  * CONSTANTS
@@ -52,28 +53,6 @@ function toggleOtherCommunityField() {
     }
 }
 
-async function submitToAPI(formData) {
-    try {
-        const response = await fetch(API_URL, {
-            method: 'POST',
-            headers: API_HEADERS,
-            body: formData
-        });
-
-        const data = await response.json();
-
-        return {
-            success: response.ok,
-            data,
-        };
-    } catch (error) {
-        return {
-            success: false,
-            data: { message: 'Network or server error.', error },
-        };
-    }
-}
-
 async function handleFormSubmit(e) {
     e.preventDefault();
 
@@ -102,13 +81,30 @@ async function handleFormSubmit(e) {
         const communityInterest = form.querySelector('#community-interest').value;
         const otherCommunity = form.querySelector('#other-community').value.trim();
 
-        const apiFormData = new FormData();
-        apiFormData.append('user_name', fullName);
-        apiFormData.append('email', email);
-        apiFormData.append('custom_field_1', preferredName);
-        apiFormData.append('custom_field_2', communityInterest === 'other' ? otherCommunity : communityInterest);
+        // Create a temporary form with API field mappings
+        const tempForm = document.createElement('form');
 
-        const { success, data } = await submitToAPI(apiFormData);
+        const userNameInput = document.createElement('input');
+        userNameInput.name = 'user_name';
+        userNameInput.value = fullName;
+        tempForm.appendChild(userNameInput);
+
+        const emailInput = document.createElement('input');
+        emailInput.name = 'email';
+        emailInput.value = email;
+        tempForm.appendChild(emailInput);
+
+        const customField1Input = document.createElement('input');
+        customField1Input.name = 'custom_field_1';
+        customField1Input.value = preferredName;
+        tempForm.appendChild(customField1Input);
+
+        const customField2Input = document.createElement('input');
+        customField2Input.name = 'custom_field_2';
+        customField2Input.value = communityInterest === 'other' ? otherCommunity : communityInterest;
+        tempForm.appendChild(customField2Input);
+
+        const { success, data } = await postFormData(tempForm, API_URL, API_HEADERS);
 
 
         if (success) {
