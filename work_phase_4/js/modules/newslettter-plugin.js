@@ -8,6 +8,11 @@ import { initFormValidation } from './form.js';
  * CONSTANTS
  * Define values that don't change e.g. page titles, URLs, etc.
  */
+const API_URL = 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/genericuserprofile/';
+const API_HEADERS = {
+    'student_number': 's4980498',
+    'uqcloud_zone_id': 'c30ed0d4',
+};
 
 /**
  * VARIABLES
@@ -47,6 +52,28 @@ function toggleOtherCommunityField() {
     }
 }
 
+async function submitToAPI(formData) {
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: API_HEADERS,
+            body: formData
+        });
+
+        const data = await response.json();
+
+        return {
+            success: response.ok,
+            data,
+        };
+    } catch (error) {
+        return {
+            success: false,
+            data: { message: 'Network or server error.', error },
+        };
+    }
+}
+
 async function handleFormSubmit(e) {
     e.preventDefault();
 
@@ -66,39 +93,52 @@ async function handleFormSubmit(e) {
     newsletterForm.setSubmitButtonState(true, 'Subscribing...', 'Subscribe to Newsletter');
     newsletterForm.setFeedback('Processing your subscription...', 'loading');
 
-    const form = document.getElementById('newsletter-form');
-    const communityInterest = form.querySelector('#community-interest').value;
-    const otherCommunity = form.querySelector('#other-community').value.trim();
-
-    const formData = {
-        name: form.querySelector('#subscriber-name').value.trim(),
-        preferredName: form.querySelector('#preferred-name').value.trim(),
-        email: form.querySelector('#subscriber-email').value.trim(),
-        communityInterest: communityInterest === 'other' ? otherCommunity : communityInterest
-    };
-
     try {
-        await simulateSubscription(formData);
+        const form = document.getElementById('newsletter-form');
 
-        const displayName = formData.preferredName || formData.name;
-        newsletterForm.setFeedback(
-            `Thank you for subscribing, ${displayName}! Check your email to confirm your subscription.`,
-            'success'
-        );
+        const fullName = form.querySelector('#subscriber-name').value.trim();
+        const email = form.querySelector('#subscriber-email').value.trim();
+        const preferredName = form.querySelector('#preferred-name').value.trim();
+        const communityInterest = form.querySelector('#community-interest').value;
+        const otherCommunity = form.querySelector('#other-community').value.trim();
 
-        setTimeout(() => {
-            newsletterForm.reset();
-            newsletterForm.clearFeedback();
-            const otherGroup = document.getElementById('other-community-group');
-            if (otherGroup) {
-                otherGroup.hidden = true;
-                document.getElementById('other-community').required = false;
-            }
-        }, 5000);
+        const apiFormData = new FormData();
+        apiFormData.append('user_name', fullName);
+        apiFormData.append('email', email);
+        apiFormData.append('custom_field_1', preferredName);
+        apiFormData.append('custom_field_2', communityInterest === 'other' ? otherCommunity : communityInterest);
 
+        const { success, data } = await submitToAPI(apiFormData);
+
+
+        if (success) {
+            const displayName = preferredName || fullName;
+
+            newsletterForm.setFeedback(
+                `Thank you for subscribing, ${displayName}! Check your email to confirm your subscription.`,
+                'success'
+            );
+
+
+            setTimeout(() => {
+                newsletterForm.reset();
+                newsletterForm.clearFeedback();
+                const otherGroup = document.getElementById('other-community-group');
+                if (otherGroup) {
+                    otherGroup.hidden = true;
+                    document.getElementById('other-community').required = false;
+                }
+            }, 5000);
+
+        } else {
+            newsletterForm.setFeedback(
+                data.message || 'Sorry, there was an error processing your subscription. Please try again later.',
+                'error'
+            );
+        }
     } catch (error) {
         newsletterForm.setFeedback(
-            'Sorry, there was an error processing your subscription. Please try again later.',
+            'Network error. Please check your connection and try again.',
             'error'
         );
         console.error('Subscription error:', error);
@@ -122,15 +162,6 @@ function setupCommunityInterestValidation() {
         }
 
         toggleOtherCommunityField();
-    });
-}
-
-function simulateSubscription(data) {
-    return new Promise((resolve, _reject) => {
-        setTimeout(() => {
-            console.log('Newsletter subscription data:', data);
-            resolve({ success: true });
-        }, 1500);
     });
 }
 
