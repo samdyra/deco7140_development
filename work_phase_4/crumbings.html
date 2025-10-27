@@ -380,47 +380,60 @@
 
                 <form id="crumbings-form" class="crumb-form" novalidate>
                     <div class="form-group">
-                        <label for="recipe-creator" class="form-label">
-                            Recipe Creator <span class="required" aria-label="required">*</span>
+                        <label for="recipe-name" class="form-label">
+                            Recipe Name
+                            <span class="required-indicator" aria-label="required">*</span>
                         </label>
-                        <input type="text" id="recipe-creator" name="creator" class="form-input" required
-                            aria-required="true" aria-describedby="recipe-creator-error" placeholder="Your name">
-                        <p id="recipe-creator-error" class="error-message" role="alert" aria-live="polite"></p>
+                        <input type="text" id="recipe-name" name="recipe-name" class="form-input" required
+                            aria-required="true" aria-describedby="recipe-name-error"
+                            placeholder="e.g., Nonna's Handmade Gnocchi" />
+                        <span id="recipe-name-error" class="error-message" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-creator" class="form-label">
+                            Creator Name
+                            <span class="required-indicator" aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="recipe-creator" name="recipe-creator" class="form-input" required
+                            aria-required="true" aria-describedby="recipe-creator-error"
+                            placeholder="e.g., Maria Rossi" />
+                        <span id="recipe-creator-error" class="error-message" role="alert"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="recipe-description" class="form-label">
-                            Recipe Description <span class="required" aria-label="required">*</span>
+                            Recipe Description
+                            <span class="required-indicator" aria-label="required">*</span>
                         </label>
-                        <textarea id="recipe-description" name="description" class="form-input form-textarea" rows="4"
-                            required aria-required="true" aria-describedby="recipe-description-error"
-                            placeholder="Share the story and instructions for your traditional recipe..."></textarea>
-                        <p id="recipe-description-error" class="error-message" role="alert" aria-live="polite"></p>
+                        <textarea id="recipe-description" name="recipe-description" class="form-input" rows="4" required
+                            aria-required="true" aria-describedby="recipe-description-error"
+                            placeholder="Share your recipe story..."></textarea>
+                        <span id="recipe-description-error" class="error-message" role="alert"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="recipe-photo" class="form-label">
-                            Recipe Photo <span class="required" aria-label="required">*</span>
+                            Recipe Photo (Optional)
                         </label>
-                        <div class="file-input-wrapper">
-                            <input type="file" id="recipe-photo" name="photo" class="form-input-file" accept="image/*"
-                                required aria-required="true" aria-describedby="recipe-photo-error photo-help">
-                            <label for="recipe-photo" class="file-input-label">
-                                <span class="file-input-text">Choose a file</span>
-                                <span class="file-input-button">Browse</span>
-                            </label>
-                            <p id="photo-preview" class="file-name"></p>
-                        </div>
-                        <p id="photo-help" class="form-help">Max file size: 10MB. Supported formats: JPG, PNG, GIF</p>
-                        <p id="recipe-photo-error" class="error-message" role="alert" aria-live="polite"></p>
+                        <label for="recipe-photo" class="file-input-label">
+                            <span class="file-input-text">Choose a file</span>
+                        </label>
+                        <input type="file" id="recipe-photo" name="recipe-photo" class="file-input" accept="image/*"
+                            aria-describedby="recipe-photo-error photo-preview" />
+                        <span id="photo-preview" class="file-preview"></span>
+                        <span id="recipe-photo-error" class="error-message" role="alert"></span>
                     </div>
 
-                    <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true">
-                    </div>
+                    <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
 
-                    <div class="form-actions">
-                        <button type="button" class="button button-secondary" id="cancel-btn">Cancel</button>
-                        <button type="submit" class="button button-primary">Create Recipe</button>
+                    <div class="modal-actions">
+                        <button type="button" id="cancel-btn" class="button button-secondary">
+                            Cancel
+                        </button>
+                        <button type="submit" class="button button-primary">
+                            Create Recipe
+                        </button>
                     </div>
                 </form>
             </div>

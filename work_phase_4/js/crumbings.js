@@ -5,6 +5,8 @@
 import { initFormValidation } from './modules/form.js';
 import { initModal } from './modules/modal.js';
 import { postFormData } from './modules/postFormData.js';
+import { fetchGetData } from './modules/getData.js';
+import { initLeaderboard } from './modules/get-leaderboard.js';
 
 /**
  * CONSTANTS
@@ -22,6 +24,7 @@ const API_HEADERS = {
  */
 let crumbingsModal;
 let crumbingsForm;
+let loadLeaderboard;
 
 /**
  * FUNCTIONS
@@ -52,17 +55,20 @@ async function handleFormSubmit(e) {
 
     try {
         const form = document.getElementById('crumbings-form');
+        const recipeName = form.querySelector('#recipe-name').value.trim();
         const creatorName = form.querySelector('#recipe-creator').value.trim();
         const description = form.querySelector('#recipe-description').value.trim();
         const photoFile = form.querySelector('#recipe-photo').files[0];
 
         const randomAttempts = getRandomAttempts();
 
+        const combinedName = `${recipeName} - ${creatorName}`;
+
         // Create a temporary form with API field mappings
         const tempForm = document.createElement('form');
         const nameInput = document.createElement('input');
         nameInput.name = 'name';
-        nameInput.value = creatorName;
+        nameInput.value = combinedName;
         tempForm.appendChild(nameInput);
 
         const emailInput = document.createElement('input');
@@ -102,6 +108,8 @@ async function handleFormSubmit(e) {
                 const filePreview = document.getElementById('photo-preview');
                 if (fileLabel) fileLabel.textContent = 'Choose a file';
                 if (filePreview) filePreview.textContent = '';
+
+                loadLeaderboard();
             }, 2000);
         } else {
             crumbingsForm.setFeedback(
@@ -125,6 +133,9 @@ async function handleFormSubmit(e) {
  * The code that runs when a user interacts with the page
  */
 document.addEventListener('DOMContentLoaded', () => {
+    loadLeaderboard = initLeaderboard(API_URL, API_HEADERS, fetchGetData);
+    loadLeaderboard();
+
     crumbingsModal = initModal('create-crumbings-modal');
     crumbingsForm = initFormValidation('crumbings-form');
 
