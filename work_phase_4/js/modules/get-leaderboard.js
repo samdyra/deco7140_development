@@ -45,7 +45,7 @@ function showLeaderboardError(container, retryCallback) {
             <p class="error-message">
                 We couldn't load the top recipes. Please try again.
             </p>
-            <button class="retry-button" id="retry-leaderboard">
+            <button class="button button-primary" id="retry-leaderboard">
                 Try Again
             </button>
         </div>

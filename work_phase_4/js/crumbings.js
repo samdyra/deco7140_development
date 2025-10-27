@@ -58,10 +58,9 @@ async function handleFormSubmit(e) {
         const recipeName = form.querySelector('#recipe-name').value.trim();
         const creatorName = form.querySelector('#recipe-creator').value.trim();
         const description = form.querySelector('#recipe-description').value.trim();
-        const photoFile = form.querySelector('#recipe-photo').files[0];
+        const photoFile = form.querySelector('#photo').files[0];
 
         const randomAttempts = getRandomAttempts();
-
         const combinedName = `${recipeName} - ${creatorName}`;
 
         // Create a temporary form with API field mappings

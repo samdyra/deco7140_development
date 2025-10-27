@@ -413,16 +413,20 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="recipe-photo" class="form-label">
-                            Recipe Photo (Optional)
+                        <label for="photo" class="form-label">
+                            Photo <span class="required-indicator" aria-label="required">*</span>
                         </label>
-                        <label for="recipe-photo" class="file-input-label">
-                            <span class="file-input-text">Choose a file</span>
-                        </label>
-                        <input type="file" id="recipe-photo" name="recipe-photo" class="file-input" accept="image/*"
-                            aria-describedby="recipe-photo-error photo-preview" />
-                        <span id="photo-preview" class="file-preview"></span>
-                        <span id="recipe-photo-error" class="error-message" role="alert"></span>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="photo" name="photo" class="form-input-file" accept="image/*" required
+                                aria-required="true" aria-describedby="photo-error photo-help">
+                            <label for="photo" class="file-input-label">
+                                <span class="file-input-text">Choose a file</span>
+                                <span class="file-input-button">Browse</span>
+                            </label>
+                            <p id="photo-preview" class="file-name"></p>
+                        </div>
+                        <p id="photo-help" class="form-help">Max file size: 10MB. Supported formats: JPG, PNG, GIF</p>
+                        <p id="photo-error" class="error-message" role="alert" aria-live="polite"></p>
                     </div>
 
                     <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
