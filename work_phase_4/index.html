@@ -2,23 +2,282 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work Phase 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedCrumbs - Share Your Culinary Heritage</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/home_page.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 </head>
 
 <body>
-    <header>
-        <h1>Sam's Work Phase 4</h1>
-    </header>
-    <section>
-        <p>This page will show Sam's work phase 4</p>
-    </section>
-    <nav>
-        <nav>
-            <a href="./home_page.html">Home</a>
-        </nav>
+    <nav id="nav-mobile" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page"><span class="icon">🏚️</span></a></li>
+            <li><a href="feed_crumbs.html"><span class="icon">🗺️</span></a></li>
+            <li><a href="crumbs_map.html"><span>🗺️</span></a></li>
+            <li><a href="crumbings.html"><span>👥</span></a></li>
+            <li><a href="community.html"><span>👥</span></a></li>
+        </ul>
     </nav>
+    <nav id="nav-dekstop" aria-label="Desktop Navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page"><span class="icon">Home</span></a></li>
+            <li><a href="feed_crumbs.html"><span class="icon">FeedCrumbs</span></a></li>
+            <li><a href="crumbs_map.html"><span>CrumbsMap</span></a></li>
+            <li><a href="crumbings.html"><span>Crumbings</span></a></li>
+            <li><a href="community.html"><span>OZvent</span></a></li>
+        </ul>
+    </nav>
+    <hr>
+    <section class="hero">
+        <div class="hero-container " aria-label="Hero Section">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Welcome to FeedCrumbs</p>
+                <h1 class="hero-title">Share Your Culinary Heritage</h1>
+                <p class="hero-subtitle">Connect with a vibrant community that celebrates traditional recipes
+                    and
+                    cultural food stories from every corner of Australia. Your heritage deserves to be shared.</p>
+                <div class="hero-actions">
+                    <a href="#highlight" class="button button-primary">Explore</a>
+                    <a href="./about.html" class="button button-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/images/bg.png"
+                    alt="Diverse community sharing traditional cuisines together at a festive gathering">
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-16">
+        <section class="highlights" aria-labelledby="highlights-title" id="highlight">
+            <header class="highlights-header">
+                <span class="highlights-eyebrow">Discover Our Features</span>
+                <h2 id="highlights-title" class="highlights-title">Share, Compete, and Explore</h2>
+                <p class="highlights-description">Three unique ways to celebrate your culinary heritage and connect
+                    with food lovers across Australia.</p>
+            </header>
+
+            <div class="highlights-grid">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="./assets/images/bg.png"
+                            alt="Community members sharing food stories and recipes on FeedCrumbs timeline">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">FeedCrumbs</h3>
+                        <p class="card-description">Share your culinary stories, traditional recipes, and food
+                            experiences with our community. Connect through posts, photos, and meaningful
+                            conversations about cultural cuisine.</p>
+                        <button class="card-link">View Recipes</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="./assets/images/bg.png"
+                            alt="Exciting cooking competition showcasing traditional cultural dishes">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Crumbings</h3>
+                        <p class="card-description">Join exciting cooking competitions that celebrate traditional
+                            and cultural cuisines. Showcase your skills, learn from others, and earn recognition for
+                            your heritage dishes.</p>
+                        <a href="#crumbings" class="card-link">View Competitions</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="./assets/images/bg.png"
+                            alt="Interactive map showing cultural food locations across Australia">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">CrumbsMap</h3>
+                        <p class="card-description">Discover cultural food experiences near you. Explore geolocated
+                            posts, find authentic restaurants, and connect with local culinary traditions across
+                            Australia.</p>
+                        <a href="#crumbsmap" class="card-link">Explore Map</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" aria-labelledby="about-title">
+            <header class="about-header">
+                <span class="about-eyebrow">Our Story</span>
+                <h2 id="about-title" class="about-title">Get to Know FeedCrumbs</h2>
+                <p class="about-description">A platform built on pride, warmth, and understanding—where every dish
+                    tells a story and every story builds connection.</p>
+            </header>
+
+            <div class="about-content">
+                <article class="about-item">
+                    <div class="about-image">
+                        <img src="./assets/images/bg.png"
+                            alt="Families gathering around traditional dishes celebrating their cultural heritage">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="about-item-title">Who is CCI?</h3>
+                        <p class="about-item-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Perspiciatis quidem mollitia maiores ipsum voluptates vel ullam consequatur dolores!
+                            Numquam rerum ea sequi sed, nemo et amet sit laborum voluptates velit officia mollitia
+                            tempore incidunt vitae veritatis, quas nam eveniet iusto temporibus accusantium ex
+                            labore cum. Voluptates esse doloremque animi itaque.</p>
+                        <a href="about.html">
+                            <button class="button button-primary btn-learn-more">Learn More</button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="about-item about-item-reverse">
+                    <div class="about-image">
+                        <img src="./assets/images/bg.png"
+                            alt="Diverse community members connecting through shared appreciation of cultural cuisine">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="about-item-title">What are our values and missions?</h3>
+                        <p class="about-item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quisquam pariatur neque sapiente error inventore perferendis ratione sed maxime vel
+                            atque commodi ullam ipsum, minus dignissimos nostrum eos iure, beatae nobis aliquid
+                            voluptatem. Asperiores consequatur cumque consequuntur. Recusandae, voluptas ipsa.
+                            Commodi vitae corporis velit iure sunt quaerat similique alias adipisci officia.</p>
+                        <a href="about.html">
+                            <button class="button button-primary btn-learn-more">Learn More</button>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="newsletter-section" aria-labelledby="newsletter-title">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-header">
+                    <h2 id="newsletter-title" class="newsletter-title">Stay Connected</h2>
+                    <p class="newsletter-description">Join our community newsletter to receive updates on new
+                        recipes, upcoming events, and cultural stories from across Australia.</p>
+                </div>
+                <form id="newsletter-form" class="newsletter-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="subscriber-name" class="form-label">
+                                Full Name <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input type="text" id="subscriber-name" name="name" class="form-input" required
+                                aria-required="true" aria-describedby="subscriber-name-error" autocomplete="name">
+                            <p id="subscriber-name-error" class="error-message" role="alert" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred-name" class="form-label">
+                                Preferred Name
+                            </label>
+                            <input type="text" id="preferred-name" name="preferredName" class="form-input"
+                                aria-describedby="preferred-help" autocomplete="nickname">
+                            <p id="preferred-help" class="form-help">Optional: How you'd like to be addressed</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscriber-email" class="form-label">
+                            Email Address <span class="required" aria-label="required">*</span>
+                        </label>
+                        <input type="email" id="subscriber-email" name="email" class="form-input" required
+                            aria-required="true" aria-describedby="subscriber-email-error" autocomplete="email">
+                        <p id="subscriber-email-error" class="error-message" role="alert" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="community-interest" class="form-label">
+                            Community Interest <span class="required" aria-label="required">*</span>
+                        </label>
+                        <select id="community-interest" name="communityInterest" class="form-input" required
+                            aria-required="true" aria-describedby="community-interest-error"
+                            aria-controls="other-community-group">
+                            <option value="">Select a community</option>
+                            <option value="asian">Asian Cuisine Lovers</option>
+                            <option value="latin">Latin American Flavors</option>
+                            <option value="mediterranean">Mediterranean Kitchen</option>
+                            <option value="indigenous">Indigenous Australian Food</option>
+                            <option value="african">African Cuisine Hub</option>
+                            <option value="european">European Heritage Cooking</option>
+                            <option value="all">All Communities</option>
+                            <option value="other">Other (Please specify)</option>
+                        </select>
+                        <p id="community-interest-error" class="error-message" role="alert" aria-live="polite"></p>
+                    </div>
+
+                    <div id="other-community-group" class="form-group" hidden>
+                        <label for="other-community" class="form-label">
+                            Please Specify <span class="required" aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="other-community" name="otherCommunity" class="form-input"
+                            aria-required="false" aria-describedby="other-community-error"
+                            placeholder="Enter your community interest">
+                        <p id="other-community-error" class="error-message" role="alert" aria-live="polite"></p>
+                    </div>
+
+                    <div id="newsletter-feedback" class="form-feedback" role="status" aria-live="polite"
+                        aria-atomic="true"></div>
+
+                    <button type="submit" class="button button-primary newsletter-submit">Subscribe to
+                        Newsletter</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">FeedCrumbs</h3>
+                    <p class="footer-tagline">Share Your Culinary Heritage</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <div class="footer-links">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="feedcrumbs.html">FeedCrumbs</a></li>
+                            <li><a href="crumbings.html">Crumbings</a></li>
+                            <li><a href="crumbsmap.html">CrumbsMap</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 class="footer-heading">Support</h4>
+                        <ul>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="guidelines.html">Community Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 class="footer-heading">Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 FeedCrumbs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </main>
+    <script type="module" src="js/modules/newslettter-plugin.js"></script>
 </body>
 
 </html>
