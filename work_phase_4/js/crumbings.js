@@ -31,7 +31,7 @@ let loadLeaderboard;
  * Group code into functions to make it reusable
  */
 function getRandomAttempts() {
-    return Math.floor(Math.random() * (300 - 20 + 1)) + 20;
+    return Math.floor(Math.random() * 300) + 700;
 }
 
 async function handleFormSubmit(e) {

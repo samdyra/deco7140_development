@@ -119,7 +119,7 @@ function extractAttempts(email) {
 function filterTestData(data) {
     return data.filter(recipe => {
         const nameLower = recipe.name.toLowerCase();
-        return !nameLower.includes('sam') && !nameLower.includes('admin');
+        return !nameLower.includes('sam') && !nameLower.includes('admin') && !nameLower.includes('dwiputra');
     });
 }
 
