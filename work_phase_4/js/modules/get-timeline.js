@@ -142,6 +142,11 @@ function initTimeline(apiUrl, apiHeaders, fetchGetData, getTimeAgo) {
                 container.innerHTML = '';
 
                 data.forEach(member => {
+                    const email = String(member.email).toLowerCase();
+                    if (email.includes('admin') || email.includes('sam')) {
+                        return;
+                    }
+
                     const post = createPostElement(member, getTimeAgo);
                     container.appendChild(post);
                 });
