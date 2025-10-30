@@ -201,8 +201,11 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="subscriber-name" class="form-label">
-                                    Full Name <span class="required" aria-label="required">*</span>
+                                    Full Name
+                                    <span class="required" aria-hidden="true">*</span>
+                                    <span class="visually-hidden">(required)</span>
                                 </label>
+
                                 <input type="text" id="subscriber-name" name="name" class="form-input" required
                                     aria-required="true" aria-describedby="subscriber-name-error" autocomplete="name">
                                 <p id="subscriber-name-error" class="error-message" role="alert" aria-live="polite"></p>
@@ -220,8 +223,11 @@
 
                         <div class="form-group">
                             <label for="subscriber-email" class="form-label">
-                                Email Address <span class="required" aria-label="required">*</span>
+                                Email Address
+                                <span class="required" aria-hidden="true">*</span>
+                                <span class="visually-hidden">(required)</span>
                             </label>
+
                             <input type="email" id="subscriber-email" name="email" class="form-input" required
                                 aria-required="true" aria-describedby="subscriber-email-error" autocomplete="email">
                             <p id="subscriber-email-error" class="error-message" role="alert" aria-live="polite"></p>
@@ -229,11 +235,12 @@
 
                         <div class="form-group">
                             <label for="community-interest" class="form-label">
-                                Community Interest <span class="required" aria-label="required">*</span>
+                                Community Interest
+                                <span class="required" aria-hidden="true">*</span>
+                                <span class="visually-hidden">(required)</span>
                             </label>
                             <select id="community-interest" name="communityInterest" class="form-input" required
-                                aria-required="true" aria-describedby="community-interest-error"
-                                aria-controls="other-community-group">
+                                aria-required="true" aria-describedby="community-interest-error">
                                 <option value="">Select a community</option>
                                 <option value="asian">Asian Cuisine Lovers</option>
                                 <option value="latin">Latin American Flavors</option>
