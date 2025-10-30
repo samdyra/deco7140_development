@@ -209,20 +209,23 @@ function showRecipeDetail(recipe) {
 function createRankingItem(recipe, position) {
     const li = document.createElement('li');
     li.className = position <= 3 ? `ranking-item ranking-item-${position}` : 'ranking-item';
-    li.style.cursor = 'pointer';
-    li.setAttribute('tabindex', '0');
-    li.setAttribute('role', 'button');
-    li.setAttribute('aria-label', `View details for ${parseNameField(recipe.name).recipeName}`);
+
+    const button = document.createElement('button');
+    button.className = 'ranking-item-button';
+    button.type = 'button';
+
+    const { recipeName, creatorName } = parseNameField(recipe.name);
+    const attempts = extractAttempts(recipe.email);
+
+    button.setAttribute('aria-label', `${recipeName} by ${creatorName} ${attempts} attempts`);
 
     const positionSpan = document.createElement('span');
     positionSpan.className = 'ranking-position';
-    positionSpan.setAttribute('aria-label', `Position ${position}`);
+    positionSpan.setAttribute('aria-hidden', 'true');
     positionSpan.textContent = position;
 
     const infoDiv = document.createElement('div');
     infoDiv.className = 'ranking-info';
-
-    const { recipeName, creatorName } = parseNameField(recipe.name);
 
     const nameSpan = document.createElement('span');
     nameSpan.className = 'ranking-name';
@@ -230,15 +233,13 @@ function createRankingItem(recipe, position) {
 
     const creatorSpan = document.createElement('span');
     creatorSpan.className = 'ranking-creator';
-    creatorSpan.textContent = `${creatorName}`;
+    creatorSpan.textContent = `by ${creatorName}`;
 
     infoDiv.appendChild(nameSpan);
     infoDiv.appendChild(creatorSpan);
 
     const statsDiv = document.createElement('div');
     statsDiv.className = 'ranking-stats';
-
-    const attempts = extractAttempts(recipe.email);
 
     const numberSpan = document.createElement('span');
     numberSpan.className = 'ranking-number';
@@ -251,19 +252,14 @@ function createRankingItem(recipe, position) {
     statsDiv.appendChild(numberSpan);
     statsDiv.appendChild(labelSpan);
 
-    li.appendChild(positionSpan);
-    li.appendChild(infoDiv);
-    li.appendChild(statsDiv);
+    button.appendChild(positionSpan);
+    button.appendChild(infoDiv);
+    button.appendChild(statsDiv);
 
-    li.addEventListener('click', () => {
+    li.appendChild(button);
+
+    button.addEventListener('click', () => {
         showRecipeDetail(recipe);
-    });
-
-    li.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            showRecipeDetail(recipe);
-        }
     });
 
     return li;

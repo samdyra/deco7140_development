@@ -72,11 +72,10 @@
 }
 
 .ranking-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    display: block;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
 }
 
 .ranking-item:last-child {
@@ -152,7 +151,7 @@
 }
 
 .ranking-number {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1;
@@ -162,6 +161,29 @@
     color: var(--text-color);
     font-size: 0.75rem;
     text-transform: uppercase;
+}
+
+.ranking-item-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.ranking-item-button:hover {
+    transform: translateX(4px);
+}
+
+.ranking-item-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 
@@ -373,6 +395,11 @@
 
     .recipe-detail-creator {
         font-size: 1.125rem;
+    }
+
+    .ranking-position {
+        width: 2.25rem;
+        height: 2.25rem;
     }
 }
 
