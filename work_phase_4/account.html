@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/account.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+</head>
+
+<body>
+    <nav id="nav-mobile" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="index.html"><span>🏚️</span></a></li>
+            <li><a href="feed_crumbs.html"><span>🗺️</span></a></li>
+            <li><a href="crumbs_map.html"><span>🗺️</span></a></li>
+            <li><a href="crumbings.html"><span>👥</span></a></li>
+            <li><a href="community.html"><span>👥</span></a></li>
+        </ul>
+    </nav>
+    <nav id="nav-dekstop" aria-label="Desktop Navigation">
+        <ul>
+            <li><a href="index.html"><span>Home</span></a></li>
+            <li><a href="feed_crumbs.html"><span>FeedCrumbs</span></a></li>
+            <li><a href="crumbs_map.html"><span>CrumbsMap</span></a></li>
+            <li><a href="crumbings.html"><span>Crumbings</span></a></li>
+            <li><a href="community.html"><span>OZvent</span></a></li>
+        </ul>
+    </nav>
+
+
+    <main id="main-content" class="account-page">
+        <div class="container">
+
+            <section class="profile-section" aria-labelledby="profile-heading">
+                <div class="profile-card">
+                    <figure class="profile-avatar" aria-hidden="false">
+                        <img src="assets/favicon.ico" alt="Profile picture of your account">
+                    </figure>
+
+                    <div class="profile-info">
+                        <h1 id="profile-heading" class="profile-name">Sam The Geodesist</h1>
+                        <p class="profile-username">@samdyra</p>
+                        <p class="profile-bio">
+                            Passionate about exploring the world one crumb at a time. Sharing my culinary adventures and
+                            recipes from around the globe. Food lover, traveler, and storyteller. Join me on my
+                            journey to discover the flavors that connect us all.
+
+                        </p>
+
+                        <div class="profile-actions">
+                            <button class="button button-primary" type="button">Edit Profile</button>
+                            <button class="button button-secondary" type="button">Upload Photo</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="accessibility-section">
+                <div class="section-header">
+                    <h2>Accessibility Settings</h2>
+                    <p class="section-description">Customize your viewing experience to suit your needs</p>
+                </div>
+
+                <div class="settings-card">
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3 class="setting-label">Font Size</h3>
+                                <p class="setting-description">Adjust text size for better readability</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="font-size-controls">
+                                    <button class="font-button" aria-label="Decrease font size">A-</button>
+                                    <span class="font-size-indicator" aria-live="polite">Normal</span>
+                                    <button class="font-button" aria-label="Increase font size">A+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3 class="setting-label">High Contrast Mode</h3>
+                                <p class="setting-description">Increase contrast between text and background for better
+                                    visibility</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="high-contrast-toggle"
+                                        aria-label="Toggle high contrast mode">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3 class="setting-label">Reduce Motion</h3>
+                                <p class="setting-description">Minimize animations and transitions for a calmer
+                                    experience</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="reduce-motion-toggle" aria-label="Toggle reduced motion">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3 class="setting-label">Underline Links</h3>
+                                <p class="setting-description">Add underlines to all links for easier identification</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="underline-links-toggle"
+                                        aria-label="Toggle link underlines">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3 class="setting-label">Focus Indicators</h3>
+                                <p class="setting-description">Enhanced focus outlines for keyboard navigation</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="focus-indicators-toggle"
+                                        aria-label="Toggle enhanced focus indicators" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-footer">
+                        <button class="button button-primary">Save Preferences</button>
+                        <button class="button button-secondary">Reset to Default</button>
+                    </div>
+                </div>
+
+                <div class="accessibility-info">
+                    <h3>Need Additional Support?</h3>
+                    <p>We're committed to making Crumbings accessible to everyone. If you encounter any accessibility
+                        barriers or need assistance, please <a href="mailto:accessibility@crumbings.com">contact our
+                            accessibility team</a>.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">FeedCrumbs</h3>
+                    <p class="footer-tagline">Share Your Culinary Heritage</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <div class="footer-links">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="feed_crumbs.html">FeedCrumbs</a></li>
+                            <li><a href="crumbings.html">Crumbings</a></li>
+                            <li><a href="crumbs_map.html">CrumbsMap</a></li>
+                            <li><a href="community.html">OZvent</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 class="footer-heading">Assignment Specific</h4>
+                        <ul>
+                            <li><a href="genai_mt_acknowledgement.html">AI Acknowledgement</a></li>
+                            <li><a href="implementation_rationale.html">Implementation Rationale</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 FeedCrumbs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
