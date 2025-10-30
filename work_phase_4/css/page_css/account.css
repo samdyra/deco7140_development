@@ -50,7 +50,8 @@
 
 .profile-username {
     margin: 0.25rem 0;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.15rem;
 }
 
 .profile-bio {
@@ -195,7 +196,7 @@
 }
 
 .accessibility-info a {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
