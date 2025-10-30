@@ -917,6 +917,11 @@
     margin-inline-end: auto;
 }
 
+.small-image {
+    width: 650px;
+    height: auto;
+}
+
 .debug {
     border: 1px solid red;
 }
