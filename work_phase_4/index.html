@@ -33,14 +33,16 @@
         </ul>
     </nav>
     <hr>
-    <section class="hero">
-        <div class="hero-container " aria-label="Hero Section">
+    <main class="hero">
+        <section class="hero-container" aria-labelledby="hero-title">
             <div class="hero-content">
                 <p class="hero-eyebrow">Welcome to FeedCrumbs</p>
-                <h1 class="hero-title">Share Your Culinary Heritage</h1>
-                <p class="hero-subtitle">Connect with a vibrant community that celebrates traditional recipes
-                    and
-                    cultural food stories from every corner of Australia. Your heritage deserves to be shared.</p>
+                <h1 id="hero-title" class="hero-title">Share Your Culinary Heritage</h1>
+                <p class="hero-subtitle">
+                    Connect with a vibrant community that celebrates traditional recipes
+                    and cultural food stories from every corner of Australia.
+                    Your heritage deserves to be shared.
+                </p>
                 <div class="hero-actions">
                     <a href="#highlight" class="button button-primary">Explore</a>
                     <a href="./about.html" class="button button-secondary">Learn More</a>
@@ -50,8 +52,8 @@
                 <img src="./assets/images/bg.png"
                     alt="Diverse community sharing traditional cuisines together at a festive gathering">
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div class="container mt-16">
         <section class="highlights" aria-labelledby="highlights-title" id="highlight">
@@ -174,8 +176,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="subscriber-name" class="form-label">
-                                Full Name <span class="required" aria-label="required">*</span>
+                                Full Name
+                                <span class="required" aria-hidden="true">*</span>
+                                <span class="visually-hidden">(required)</span>
                             </label>
+
                             <input type="text" id="subscriber-name" name="name" class="form-input" required
                                 aria-required="true" aria-describedby="subscriber-name-error" autocomplete="name">
                             <p id="subscriber-name-error" class="error-message" role="alert" aria-live="polite"></p>
@@ -193,8 +198,11 @@
 
                     <div class="form-group">
                         <label for="subscriber-email" class="form-label">
-                            Email Address <span class="required" aria-label="required">*</span>
+                            Email Address
+                            <span class="required" aria-hidden="true">*</span>
+                            <span class="visually-hidden">(required)</span>
                         </label>
+
                         <input type="email" id="subscriber-email" name="email" class="form-input" required
                             aria-required="true" aria-describedby="subscriber-email-error" autocomplete="email">
                         <p id="subscriber-email-error" class="error-message" role="alert" aria-live="polite"></p>
@@ -202,11 +210,12 @@
 
                     <div class="form-group">
                         <label for="community-interest" class="form-label">
-                            Community Interest <span class="required" aria-label="required">*</span>
+                            Community Interest
+                            <span class="required" aria-hidden="true">*</span>
+                            <span class="visually-hidden">(required)</span>
                         </label>
                         <select id="community-interest" name="communityInterest" class="form-input" required
-                            aria-required="true" aria-describedby="community-interest-error"
-                            aria-controls="other-community-group">
+                            aria-required="true" aria-describedby="community-interest-error">
                             <option value="">Select a community</option>
                             <option value="asian">Asian Cuisine Lovers</option>
                             <option value="latin">Latin American Flavors</option>
