@@ -37,6 +37,12 @@ nav ul {
     position: relative;
 }
 
+#nav-mobile ul li a img {
+    height: 24px;
+    margin-bottom: 0.25rem;
+}
+
+
 
 #nav-mobile ul li a[aria-current="page"] {
     background-color: var(--primary-color);
@@ -104,6 +110,8 @@ nav ul {
     height: 4px;
     background-color: var(--background-color);
 }
+
+
 
 @media (min-width: 768px) {
     #nav-mobile {
