@@ -15,7 +15,14 @@ function validateField(field) {
     let errorMessage = '';
 
     if (field.validity.valueMissing) {
-        errorMessage = `${field.labels[0].textContent.replace('*', '').trim()} is required.`;
+        const label = field.labels[0];
+        const labelClone = label.cloneNode(true);
+
+        // Remove visually hidden elements and asterisks
+        labelClone.querySelectorAll('.visually-hidden, .required').forEach(el => el.remove());
+
+        const fieldLabel = labelClone.textContent.trim();
+        errorMessage = `${fieldLabel} is required.`;
     } else if (field.validity.typeMismatch && field.type === 'email') {
         errorMessage = 'Please enter a valid email address.';
     } else if (field.type === 'file') {
