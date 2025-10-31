@@ -452,54 +452,61 @@
                     <div class="form-group">
                         <label for="recipe-name" class="form-label">
                             Recipe Name
-                            <span class="required-indicator" aria-label="required">*</span>
+                            <span class="required" aria-hidden="true">*</span>
+                            <span class="visually-hidden">(required)</span>
                         </label>
                         <input type="text" id="recipe-name" name="recipe-name" class="form-input" required
                             aria-required="true" aria-describedby="recipe-name-error"
                             placeholder="e.g., Nonna's Handmade Gnocchi" />
-                        <span id="recipe-name-error" class="error-message" role="alert"></span>
+                        <p id="recipe-name-error" class="error-message" role="alert" aria-live="polite"></p>
                     </div>
 
                     <div class="form-group">
                         <label for="recipe-creator" class="form-label">
                             Creator Name
-                            <span class="required-indicator" aria-label="required">*</span>
+                            <span class="required" aria-hidden="true">*</span>
+                            <span class="visually-hidden">(required)</span>
                         </label>
                         <input type="text" id="recipe-creator" name="recipe-creator" class="form-input" required
                             aria-required="true" aria-describedby="recipe-creator-error"
                             placeholder="e.g., Maria Rossi" />
-                        <span id="recipe-creator-error" class="error-message" role="alert"></span>
+                        <p id="recipe-creator-error" class="error-message" role="alert" aria-live="polite"></p>
                     </div>
 
                     <div class="form-group">
                         <label for="recipe-description" class="form-label">
                             Recipe Description
-                            <span class="required-indicator" aria-label="required">*</span>
+                            <span class="required" aria-hidden="true">*</span>
+                            <span class="visually-hidden">(required)</span>
                         </label>
-                        <textarea id="recipe-description" name="recipe-description" class="form-input" rows="4" required
-                            aria-required="true" aria-describedby="recipe-description-error"
+                        <textarea id="recipe-description" name="recipe-description" class="form-input form-textarea"
+                            rows="4" required aria-required="true" aria-describedby="recipe-description-error"
                             placeholder="Share your recipe story..."></textarea>
-                        <span id="recipe-description-error" class="error-message" role="alert"></span>
+                        <p id="recipe-description-error" class="error-message" role="alert" aria-live="polite"></p>
                     </div>
 
                     <div class="form-group">
                         <label for="photo" class="form-label">
-                            Photo <span class="required-indicator" aria-label="required">*</span>
+                            Photo
+                            <span class="required" aria-hidden="true">*</span>
+                            <span class="visually-hidden">(required)</span>
                         </label>
                         <div class="file-input-wrapper">
                             <input type="file" id="photo" name="photo" class="form-input-file" accept="image/*" required
                                 aria-required="true" aria-describedby="photo-error photo-help">
-                            <label for="photo" class="file-input-label">
+                            <div class="file-input-label" role="button" tabindex="0"
+                                onclick="document.getElementById('photo').click()"
+                                onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); document.getElementById('photo').click(); }">
                                 <span class="file-input-text">Choose a file</span>
                                 <span class="file-input-button">Browse</span>
-                            </label>
+                            </div>
                             <p id="photo-preview" class="file-name"></p>
                         </div>
                         <p id="photo-help" class="form-help">Max file size: 10MB. Supported formats: JPG, PNG, GIF</p>
                         <p id="photo-error" class="error-message" role="alert" aria-live="polite"></p>
                     </div>
 
-                    <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+                    <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
 
                     <div class="modal-actions">
                         <button type="button" id="cancel-btn" class="button button-secondary">
