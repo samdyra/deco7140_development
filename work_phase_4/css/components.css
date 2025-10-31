@@ -14,3 +14,14 @@
 @import url("./component_skeletons/header.css");
 @import url("./component_skeletons/newsletter-form.css");
 @import url("./component_skeletons/accordion.css");
+
+.small-image {
+    width: 650px;
+    height: auto;
+}
+
+.conventional-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
